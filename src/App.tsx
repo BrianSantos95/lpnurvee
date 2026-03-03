@@ -1042,7 +1042,7 @@ export default function App() {
             {/* Sticky Title */}
             <div className="md:col-span-5 md:sticky top-32">
               <span className="text-[#004cf2] font-bold tracking-wider uppercase text-sm mb-6 inline-flex items-center gap-2 bg-blue-50 py-1.5 px-4 rounded-full border border-blue-100">
-                <Star className="w-4 h-4 text-[#004cf2]" fill="currentColor" /> Quem usa, aprova
+                <span className="text-base leading-none translate-y-[-1px]">🏆</span> Quem usa, aprova
               </span>
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight [text-wrap:balance]">
                 Seja a próxima loja a <span className="text-[#004cf2] whitespace-nowrap">multiplicar o&nbsp;lucro!</span>
