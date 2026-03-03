@@ -247,7 +247,7 @@ export default function App() {
             </h1>
 
             <p className="text-lg md:text-xl text-blue-100/90 mb-10 leading-relaxed max-w-2xl mx-auto font-medium [text-wrap:balance]">
-              Como Controlar Cada Centavo da Sua Loja, Evitar a Falta de Estoque e Descobrir Seu Lucro Real – Sem Tocar em Nenhuma&nbsp;Planilha.
+              Como controlar cada centavo da sua loja, evitar a falta de estoque e descobrir seu lucro real, sem tocar em nenhuma&nbsp;planilha.
             </p>
 
             <a href="#oferta" className="block w-full sm:w-max mt-4 mx-auto">
