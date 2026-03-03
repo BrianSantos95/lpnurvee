@@ -242,12 +242,12 @@ export default function App() {
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-[4rem] font-bold tracking-tight mb-6 leading-[1.1] max-w-4xl text-white">
-              Sua loja sob controle. <br className="hidden md:block" />
-              <span className="text-blue-100 opacity-90">Decisões com clareza.</span>
+              Sua loja sob controle.<br />
+              <span className="text-blue-100 opacity-90">Decisões com&nbsp;clareza.</span>
             </h1>
 
             <p className="text-lg md:text-xl text-blue-100/90 mb-10 leading-relaxed max-w-2xl mx-auto font-medium [text-wrap:balance]">
-              Como Controlar Cada Centavo da Sua Loja, Evitar a Falta de Estoque e Descobrir Seu Lucro Real – Sem Tocar em Nenhuma Planilha.
+              Como Controlar Cada Centavo da Sua Loja, Evitar a Falta de Estoque e Descobrir Seu Lucro Real – Sem Tocar em Nenhuma&nbsp;Planilha.
             </p>
 
             <a href="#oferta" className="block w-full sm:w-max mt-4 mx-auto">
@@ -737,10 +737,9 @@ export default function App() {
 
           {/* Bottom Area */}
           <div className="text-center max-w-3xl mx-auto">
-            <p className="text-slate-400 text-lg mb-6 [text-wrap:balance]">Se você respondeu <strong className="text-white">"sim"</strong> para 2 ou mais perguntas...</p>
+            <p className="text-slate-400 text-lg mb-6 [text-wrap:balance]">Se você respondeu <strong className="text-white">"sim"</strong> para 2 ou mais&nbsp;perguntas...</p>
             <h3 className="text-4xl md:text-5xl font-extrabold text-white mb-10 tracking-tight leading-tight [text-wrap:balance]">
-              Sua loja não está crescendo.<br className="hidden md:block" />
-              <span className="text-[#004cf2] drop-shadow-[0_0_15px_rgba(0,76,242,0.4)] whitespace-nowrap md:ml-3">Está sobrevivendo.</span>
+              Sua loja não está crescendo. <span className="text-[#004cf2] drop-shadow-[0_0_15px_rgba(0,76,242,0.4)] whitespace-nowrap">Está sobrevivendo.</span>
             </h3>
 
             <a href="#oferta" className="block w-full sm:w-max mt-4 mx-auto">
@@ -761,7 +760,7 @@ export default function App() {
           <div className="text-center mb-16">
             <span className="text-[#004cf2] font-bold tracking-wider uppercase text-sm mb-4 block bg-blue-50 py-1.5 px-4 rounded-full inline-block">Dúvidas Comuns</span>
             <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
-              Dá para começar agora, <span className="text-[#004cf2]">mesmo que...</span>
+              Dá para começar agora, <span className="text-[#004cf2]">mesmo&nbsp;que...</span>
             </h2>
           </div>
 
@@ -818,11 +817,11 @@ export default function App() {
             <span className="bg-blue-900/40 text-blue-300 font-semibold tracking-wide px-4 py-1.5 rounded-full text-sm mb-6 inline-block border border-blue-700/50">
               Comparativo Visual
             </span>
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Por que o <span className="text-[#004cf2]">Nurvee</span> substitui tudo isso?
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 [text-wrap:balance]">
+              Por que o <span className="text-[#004cf2]">Nurvee</span> substitui tudo&nbsp;isso?
             </h2>
-            <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-              Compare o Nurvee com misturar planilhas, cadernos e sistemas genéricos, e entenda por que somos a solução definitiva para o controle da sua loja.
+            <p className="text-lg text-slate-400 max-w-2xl mx-auto [text-wrap:balance]">
+              Compare o Nurvee com misturar planilhas, cadernos e sistemas genéricos, e entenda por que somos a solução definitiva para o controle da sua&nbsp;loja.
             </p>
           </div>
 
@@ -1043,10 +1042,10 @@ export default function App() {
             {/* Sticky Title */}
             <div className="md:col-span-5 md:sticky top-32">
               <span className="text-[#004cf2] font-bold tracking-wider uppercase text-sm mb-4 block">Quem usa, aprova</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-                Seja a próxima loja a <span className="text-[#004cf2]">multiplicar o lucro!</span>
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight [text-wrap:balance]">
+                Seja a próxima loja a <span className="text-[#004cf2] whitespace-nowrap">multiplicar o&nbsp;lucro!</span>
               </h2>
-              <p className="text-slate-600 text-lg mb-8">Veja o que acontece quando você passa a entender os números e zera o desperdício financeiro.</p>
+              <p className="text-slate-600 text-lg mb-8 [text-wrap:balance]">Veja o que acontece quando você passa a entender os números e zera o desperdício&nbsp;financeiro.</p>
               <div className="flex -space-x-3 mb-4">
                 {[1, 2, 3, 4, 5].map(i => <img key={i} className="w-12 h-12 rounded-full border-[3px] border-slate-50" src={`https://i.pravatar.cc/100?img=${i + 10}`} alt="User" />)}
                 <div className="w-12 h-12 rounded-full border-[3px] border-slate-50 bg-[#004cf2] text-white flex items-center justify-center text-sm font-bold">+100</div>
