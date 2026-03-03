@@ -1034,54 +1034,91 @@ export default function App() {
 
 
 
-      {/* 6. PROVA SOCIAL (Testimonials) */}
-      <section className="py-32 bg-slate-50 border-t border-slate-200 overflow-hidden">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-12 gap-12 items-start">
+      {/* 6. PROVA SOCIAL (Testimonials - Marquee) */}
+      <section className="py-24 bg-slate-50 border-t border-slate-200 overflow-hidden relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 text-center relative z-20">
+          <span className="text-emerald-500 font-bold tracking-wider uppercase text-sm mb-4 block">
+            <span className="mr-1">🏆</span>
+            Quem usa, recomenda
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight [text-wrap:balance]">
+            Seja a próxima loja a <span className="text-[#004cf2] whitespace-nowrap">multiplicar o&nbsp;lucro!</span>
+          </h2>
+          <p className="text-slate-600 text-lg mb-8 [text-wrap:balance] max-w-2xl mx-auto">Veja o que acontece quando você passa a entender os números e zera o desperdício&nbsp;financeiro.</p>
+        </div>
 
-            {/* Sticky Title */}
-            <div className="md:col-span-5 md:sticky top-32">
-              <span className="text-[#004cf2] font-bold tracking-wider uppercase text-sm mb-4 block">
-                <span className="bg-gradient-to-r from-[#d8b058] to-[#ab8131] bg-clip-text text-transparent mr-1">🏆</span>
-                Quem usa, aprova
-              </span>
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight [text-wrap:balance]">
-                Seja a próxima loja a <span className="text-[#004cf2] whitespace-nowrap">multiplicar o&nbsp;lucro!</span>
-              </h2>
-              <p className="text-slate-600 text-lg mb-8 [text-wrap:balance]">Veja o que acontece quando você passa a entender os números e zera o desperdício&nbsp;financeiro.</p>
-              <div className="flex -space-x-3 mb-4">
-                {[1, 2, 3, 4, 5].map(i => <img key={i} className="w-12 h-12 rounded-full border-[3px] border-slate-50" src={`https://i.pravatar.cc/100?img=${i + 10}`} alt="User" />)}
-                <div className="w-12 h-12 rounded-full border-[3px] border-slate-50 bg-[#004cf2] text-white flex items-center justify-center text-sm font-bold">+100</div>
-              </div>
-            </div>
+        {/* Marquee Wrapper */}
+        <div className="flex flex-col gap-6 relative w-full overflow-hidden">
+          {/* Fading Edges */}
+          <div className="absolute inset-y-0 left-0 w-32 md:w-64 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute inset-y-0 right-0 w-32 md:w-64 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none"></div>
 
-            {/* Cards Column */}
-            <div className="md:col-span-7 flex flex-col gap-6">
-
-              <div className="bg-[#004cf2] text-white rounded-[2rem] p-8 md:p-10 shadow-xl shadow-[#004cf2]/20 flex flex-col md:flex-row gap-8 items-center">
-                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200&h=200" className="w-32 h-32 rounded-full object-cover shadow-lg border-4 border-white/20" alt="Cliente" />
-                <div>
-                  <p className="font-semibold text-lg md:text-xl italic mb-6 leading-relaxed">
-                    "Antes eu achava que estava empatando. O Nurvee me mostrou que alguns produtos estavam consumindo toda a minha margem. No mês seguinte que os cortei, meu lucro dobrou."
-                  </p>
-                  <div className="font-bold text-xl">Mariana Silveira</div>
-                  <div className="text-blue-200">Dona de Boutique • SP</div>
+          {/* Row 1: Moving Left */}
+          <div className="flex w-max animate-[marquee_50s_linear_infinite] hover:[animation-play-state:paused] gap-6 px-3">
+            {[
+              { name: "Mariana Silveira", role: "Dona de Boutique • SP", text: "Antes eu achava que estava empatando. O Nurvee me mostrou que alguns produtos consumiam toda a minha margem. No mês seguinte que os cortei, meu lucro dobrou.", avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=150&h=150" },
+              { name: "Carla Mendes", role: "Empreendedora • RJ", text: "Eu perdia 2 horas todo dia na planilha. Agora eu aperto um botão e vejo tudo que entrou de PIX e Cartão. A paz de espírito não tem preço !", avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=150&h=150" },
+              { name: "Juliana Costa", role: "Lojista • MG", text: "Sempre tive medo de investir em anúncios, mas agora com o fluxo de caixa certinho e sabendo o lucro real, faço isso com a maior segurança.", avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150&h=150" },
+              { name: "Amanda Silva", role: "Dona de Loja Infantil • SC", text: "A facilidade de controlar o estoque e PDV na mesma tela me economizou o preço de um funcionário. Indico pra todo mundo.", avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150" },
+              { name: "Mariana Silveira", role: "Dona de Boutique • SP", text: "Antes eu achava que estava empatando. O Nurvee me mostrou que alguns produtos consumiam toda a minha margem. No mês seguinte que os cortei, meu lucro dobrou.", avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=150&h=150" },
+              { name: "Carla Mendes", role: "Empreendedora • RJ", text: "Eu perdia 2 horas todo dia na planilha. Agora eu aperto um botão e vejo tudo que entrou de PIX e Cartão. A paz de espírito não tem preço !", avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=150&h=150" },
+              { name: "Juliana Costa", role: "Lojista • MG", text: "Sempre tive medo de investir em anúncios, mas agora com o fluxo de caixa certinho e sabendo o lucro real, faço isso com a maior segurança.", avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150&h=150" },
+              { name: "Amanda Silva", role: "Dona de Loja Infantil • SC", text: "A facilidade de controlar o estoque e PDV na mesma tela me economizou o preço de um funcionário. Indico pra todo mundo.", avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150" },
+            ].map((node, i) => (
+              <div key={i} className="w-[320px] md:w-[400px] bg-white rounded-3xl p-6 shadow-sm border border-slate-100 flex flex-col shrink-0 transform transition-transform duration-300 hover:scale-[1.02]">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-4">
+                    <img src={node.avatar} className="w-12 h-12 rounded-full object-cover shadow-sm bg-slate-100" alt={node.name} />
+                    <div>
+                      <h4 className="font-bold text-slate-800 text-sm">{node.name}</h4>
+                      <p className="text-xs text-slate-500">{node.role}</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-0.5 text-[#d8b058]">
+                    <Star className="w-4 h-4 fill-current" />
+                    <Star className="w-4 h-4 fill-current" />
+                    <Star className="w-4 h-4 fill-current" />
+                    <Star className="w-4 h-4 fill-current" />
+                    <Star className="w-4 h-4 fill-current" />
+                  </div>
                 </div>
+                <p className="text-slate-600 text-sm md:text-base leading-relaxed mt-2">"{node.text}"</p>
               </div>
+            ))}
+          </div>
 
-              <div className="bg-white text-slate-900 rounded-[2rem] p-8 md:p-10 shadow-lg border border-slate-200 flex flex-col md:flex-row gap-8 items-center relative overflow-hidden">
-                <div className="absolute top-0 right-0 p-8 text-slate-100 opacity-50"><Star className="w-32 h-32" /></div>
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200&h=200" className="w-32 h-32 rounded-full object-cover shadow-lg border-4 border-slate-100 relative z-10" alt="Cliente" />
-                <div className="relative z-10">
-                  <p className="font-semibold text-lg md:text-xl italic mb-6 leading-relaxed text-slate-700">
-                    "Eu perdia 2 horas todo dia na planilha de fechamento. Agora eu aperto um botão e vejo tudo que entrou de PIX e Cartão. A paz de espírito não tem preço!"
-                  </p>
-                  <div className="font-bold text-xl">Carla Mendes</div>
-                  <div className="text-[#004cf2]">Empreendedora • RJ</div>
+          {/* Row 2: Moving Right */}
+          <div className="flex w-max animate-[marquee-reverse_40s_linear_infinite] hover:[animation-play-state:paused] gap-6 px-3">
+            {[
+              { name: "Bárbara Leão", role: "Empreendedora • MG", text: "O suporte é simplesmente impecável. Sempre que precisamos de algo, a equipe está disponível com um sorriso no rosto. Vale cada centavo.", avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=150&h=150" },
+              { name: "Luiza Moreira", role: "Moda Íntima • SP", text: "Não sou a melhor com tecnologia, mas o Nurvee é tão visual que nem precisei de treinamento. A equipe toda já acostumou rapidinho.", avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150&h=150" },
+              { name: "Rafael Torres", role: "Multimarcas • RS", text: "Conseguimos cortar gastos invisíveis com a curva ABC. Saber quem são meus melhores clientes também mudou nosso jogo de vendas.", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150&h=150" },
+              { name: "Cláudia Vieira", role: "Dona de Loja de Calçados", text: "Minha grande dor era não saber onde estava o dinheiro. A plataforma clareou meus números, hoje eu fecho o mês muito tranquila.", avatar: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=150&h=150" },
+              { name: "Bárbara Leão", role: "Empreendedora • MG", text: "O suporte é simplesmente impecável. Sempre que precisamos de algo, a equipe está disponível com um sorriso no rosto. Vale cada centavo.", avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=150&h=150" },
+              { name: "Luiza Moreira", role: "Moda Íntima • SP", text: "Não sou a melhor com tecnologia, mas o Nurvee é tão visual que nem precisei de treinamento. A equipe toda já acostumou rapidinho.", avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150&h=150" },
+              { name: "Rafael Torres", role: "Multimarcas • RS", text: "Conseguimos cortar gastos invisíveis com a curva ABC. Saber quem são meus melhores clientes também mudou nosso jogo de vendas.", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150&h=150" },
+              { name: "Cláudia Vieira", role: "Dona de Loja de Calçados", text: "Minha grande dor era não saber onde estava o dinheiro. A plataforma clareou meus números, hoje eu fecho o mês muito tranquila.", avatar: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=150&h=150" },
+            ].map((node, i) => (
+              <div key={i} className="w-[320px] md:w-[400px] bg-white rounded-3xl p-6 shadow-sm border border-slate-100 flex flex-col shrink-0 transform transition-transform duration-300 hover:scale-[1.02]">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-4">
+                    <img src={node.avatar} className="w-12 h-12 rounded-full object-cover shadow-sm bg-slate-100" alt={node.name} />
+                    <div>
+                      <h4 className="font-bold text-slate-800 text-sm">{node.name}</h4>
+                      <p className="text-xs text-slate-500">{node.role}</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-0.5 text-[#d8b058]">
+                    <Star className="w-4 h-4 fill-current" />
+                    <Star className="w-4 h-4 fill-current" />
+                    <Star className="w-4 h-4 fill-current" />
+                    <Star className="w-4 h-4 fill-current" />
+                    <Star className="w-4 h-4 fill-current" />
+                  </div>
                 </div>
+                <p className="text-slate-600 text-sm md:text-base leading-relaxed mt-2">"{node.text}"</p>
               </div>
-
-            </div>
+            ))}
           </div>
         </div>
       </section>
