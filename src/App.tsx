@@ -1180,15 +1180,10 @@ export default function App() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-white rounded-[3rem] p-12 border border-slate-100 shadow-sm relative overflow-hidden">
 
           {/* Custom 7-Day Guarantee Circular Badge */}
-          <div className="relative w-48 h-48 mx-auto mb-10 flex items-center justify-center rounded-full bg-gradient-to-b from-[#0a1120] to-[#040812] shadow-2xl border border-slate-800">
+          <div className="relative w-48 h-48 mx-auto mb-10 flex items-center justify-center rounded-full bg-white shadow-[0_8px_30px_rgb(0,76,242,0.12)] border border-blue-50">
             {/* Outermost subtle dashes */}
             <svg className="absolute inset-0 w-full h-full animate-[spin_40s_linear_infinite]" viewBox="0 0 200 200">
-              <circle cx="100" cy="100" r="92" fill="none" stroke="#ab8131" strokeWidth="1" strokeDasharray="2 6" opacity="0.3" />
-            </svg>
-
-            {/* Outer solid thin ring */}
-            <svg className="absolute inset-0 w-full h-full" viewBox="0 0 200 200">
-              <circle cx="100" cy="100" r="82" fill="none" stroke="#ab8131" strokeWidth="0.5" opacity="0.4" />
+              <circle cx="100" cy="100" r="92" fill="none" stroke="#004cf2" strokeWidth="1" strokeDasharray="2 6" opacity="0.2" />
             </svg>
 
             {/* Rotating Text using SVG */}
@@ -1196,7 +1191,7 @@ export default function App() {
               <defs>
                 <path id="textCircle" d="M 100, 26 A 74,74 0 1,1 99.9,26" />
               </defs>
-              <text fill="#d8b058" fontSize="13" fontWeight="bold" letterSpacing="4.5">
+              <text fill="#004cf2" fontSize="13.5" fontWeight="bold" letterSpacing="4.7">
                 <textPath href="#textCircle" startOffset="0%">
                   7 DIAS DE GARANTIA • 7 DIAS DE GARANTIA •
                 </textPath>
@@ -1205,14 +1200,14 @@ export default function App() {
 
             {/* Inner dashes */}
             <svg className="absolute inset-0 w-full h-full animate-[spin_35s_linear_infinite_reverse]" viewBox="0 0 200 200">
-              <circle cx="100" cy="100" r="48" fill="none" stroke="#d8b058" strokeWidth="2" strokeDasharray="4 6" opacity="0.8" />
+              <circle cx="100" cy="100" r="48" fill="none" stroke="#004cf2" strokeWidth="2" strokeDasharray="4 6" opacity="0.4" />
             </svg>
 
             {/* Additional inner glow */}
-            <div className="absolute inset-0 rounded-full bg-[#d8b058]/5 blur-xl pointer-events-none"></div>
+            <div className="absolute inset-0 rounded-full bg-blue-500/5 blur-xl pointer-events-none"></div>
 
             {/* Center Number */}
-            <div className="relative z-10 font-bold text-[4rem] bg-gradient-to-b from-[#fde68a] to-[#ab8131] bg-clip-text text-transparent transform translate-y-1 drop-shadow-lg leading-none tracking-tighter">
+            <div className="relative z-10 font-black text-[4.5rem] text-[#004cf2] transform translate-y-1 drop-shadow-sm leading-none tracking-tighter">
               7
             </div>
           </div>
