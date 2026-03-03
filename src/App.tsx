@@ -250,24 +250,24 @@ export default function App() {
               Como Controlar Cada Centavo da Sua Loja, Evitar a Falta de Estoque e Descobrir Seu Lucro Real – Sem Tocar em Nenhuma Planilha.
             </p>
 
-            <a href="#oferta" className="block w-max mt-4 mx-auto">
-              <HoverButton className="w-full sm:w-auto h-[72px] text-xl font-bold rounded-full bg-[#0a1120] text-white group focus:outline-none flex items-center justify-center cursor-pointer transition-transform hover:scale-105 border border-slate-700/50 hover:border-slate-500/50 sm:px-12 backdrop-blur-xl shadow-2xl">
+            <a href="#oferta" className="block w-full sm:w-max mt-4 mx-auto">
+              <HoverButton className="w-full sm:w-auto h-[64px] sm:h-[72px] text-sm sm:text-xl font-bold rounded-full bg-[#0a1120] text-white group focus:outline-none flex items-center justify-center cursor-pointer transition-transform hover:scale-105 border border-slate-700/50 hover:border-slate-500/50 px-6 sm:px-12 backdrop-blur-xl shadow-2xl">
                 QUERO ASSUMIR O CONTROLE
-                <span className="w-10 h-10 ml-4 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white/20 transition-colors shrink-0">
-                  <ArrowRight className="w-5 h-5 text-white" />
+                <span className="w-8 h-8 sm:w-10 sm:h-10 ml-3 sm:ml-4 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white/20 transition-colors shrink-0">
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                 </span>
               </HoverButton>
             </a>
 
             {/* Social Proof Avatars */}
-            <div className="mt-8 flex items-center justify-center gap-4 bg-transparent px-6 py-2 mx-auto w-max">
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 bg-transparent px-2 sm:px-6 py-2 mx-auto w-full sm:w-max">
               <div className="flex -space-x-3">
                 <img className="w-8 h-8 rounded-full border-2 border-[#004cf2]" src="https://i.pravatar.cc/100?img=1" alt="User" />
                 <img className="w-8 h-8 rounded-full border-2 border-[#004cf2]" src="https://i.pravatar.cc/100?img=2" alt="User" />
                 <img className="w-8 h-8 rounded-full border-2 border-[#004cf2]" src="https://i.pravatar.cc/100?img=3" alt="User" />
                 <img className="w-8 h-8 rounded-full border-2 border-[#004cf2]" src="https://i.pravatar.cc/100?img=4" alt="User" />
               </div>
-              <p className="text-sm font-medium text-blue-100">Testado e aprovado por <strong className="text-white">+ de 500 lojas</strong></p>
+              <p className="text-sm font-medium text-blue-100 text-center">Testado e aprovado por <strong className="text-white">+ de 500 lojas</strong></p>
             </div>
           </motion.div>
         </div>
@@ -744,11 +744,11 @@ export default function App() {
               <span className="text-[#004cf2] drop-shadow-[0_0_15px_rgba(0,76,242,0.4)]">Está sobrevivendo.</span>
             </h3>
 
-            <a href="#oferta" className="block w-max mt-4 mx-auto">
-              <HoverButton className="w-full sm:w-auto h-[72px] text-xl font-bold rounded-full bg-[#0a1120] text-white group focus:outline-none flex items-center justify-center cursor-pointer transition-transform hover:scale-105 border border-slate-700/50 hover:border-slate-500/50 sm:px-12 backdrop-blur-xl shadow-2xl">
+            <a href="#oferta" className="block w-full sm:w-max mt-4 mx-auto">
+              <HoverButton className="w-full sm:w-auto h-[64px] sm:h-[72px] text-sm sm:text-xl font-bold rounded-full bg-[#0a1120] text-white group focus:outline-none flex items-center justify-center cursor-pointer transition-transform hover:scale-105 border border-slate-700/50 hover:border-slate-500/50 px-6 sm:px-12 backdrop-blur-xl shadow-2xl">
                 QUERO ASSUMIR O CONTROLE
-                <span className="w-10 h-10 ml-4 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white/20 transition-colors shrink-0">
-                  <ArrowRight className="w-5 h-5 text-white" />
+                <span className="w-8 h-8 sm:w-10 sm:h-10 ml-3 sm:ml-4 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white/20 transition-colors shrink-0">
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                 </span>
               </HoverButton>
             </a>
@@ -827,17 +827,17 @@ export default function App() {
             </p>
           </div>
 
-          <div className="bg-slate-800/40 rounded-3xl border border-slate-700/50 overflow-hidden backdrop-blur-sm">
+          <div className="bg-slate-800/40 rounded-2xl sm:rounded-3xl border border-slate-700/50 overflow-hidden backdrop-blur-sm -mx-4 sm:mx-0">
             {/* Table Header */}
-            <div className="grid grid-cols-12 gap-4 p-6 border-b border-slate-700/50 items-center bg-slate-800/80">
-              <div className="col-span-8 md:col-span-6 font-semibold text-slate-300">Recurso Essencial</div>
-              <div className="col-span-4 md:col-span-3 text-center">
-                <div className="bg-[#004cf2] text-white font-bold py-2 px-4 rounded-xl inline-block shadow-[0_0_15px_rgba(0,76,242,0.4)]">
+            <div className="grid grid-cols-12 gap-2 sm:gap-4 p-4 sm:p-6 border-b border-slate-700/50 items-center bg-slate-800/80">
+              <div className="col-span-6 md:col-span-6 font-semibold text-slate-300 text-xs sm:text-base leading-tight pr-1">Recurso Essencial</div>
+              <div className="col-span-3 md:col-span-3 text-center">
+                <div className="bg-[#004cf2] text-white font-bold py-1 sm:py-2 px-1 sm:px-4 rounded-lg sm:rounded-xl inline-block shadow-[0_0_15px_rgba(0,76,242,0.4)] text-[10px] sm:text-base whitespace-nowrap">
                   Nurvee
                 </div>
               </div>
-              <div className="hidden md:block col-span-3 text-center text-slate-400 font-semibold">
-                Outros / Planilhas
+              <div className="col-span-3 md:col-span-3 text-center text-slate-400 font-semibold text-[10px] sm:text-base leading-tight">
+                Planilhas
               </div>
             </div>
 
@@ -852,20 +852,20 @@ export default function App() {
                 { label: "CRM com histórico de compras do cliente", others: "partial" },
                 { label: "Feito exclusivamente para lojistas de varejo", others: "no" },
               ].map((item, idx) => (
-                <div key={idx} className="grid grid-cols-12 gap-4 p-6 items-center hover:bg-slate-700/20 transition-colors">
-                  <div className="col-span-8 md:col-span-6 font-medium text-slate-200">
+                <div key={idx} className="grid grid-cols-12 gap-2 sm:gap-4 p-4 sm:p-6 items-center hover:bg-slate-700/20 transition-colors">
+                  <div className="col-span-6 md:col-span-6 font-medium text-slate-200 text-[11px] sm:text-base leading-snug">
                     {item.label}
                   </div>
-                  <div className="col-span-4 md:col-span-3 flex justify-center">
-                    <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center border border-blue-500/30">
-                      <Check className="w-5 h-5 text-blue-400" />
+                  <div className="col-span-3 md:col-span-3 flex justify-center">
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-blue-500/20 flex items-center justify-center border border-blue-500/30">
+                      <Check className="w-3 h-3 sm:w-5 sm:h-5 text-blue-400" />
                     </div>
                   </div>
-                  <div className="hidden md:flex col-span-3 justify-center">
+                  <div className="col-span-3 md:col-span-3 flex justify-center text-center">
                     {item.others === "no" ? (
-                      <X className="w-5 h-5 text-slate-500" />
+                      <X className="w-4 h-4 sm:w-5 sm:h-5 text-slate-500" />
                     ) : (
-                      <AlertTriangle className="w-5 h-5 text-yellow-500/70" />
+                      <AlertTriangle className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500/70" />
                     )}
                   </div>
                 </div>
