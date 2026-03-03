@@ -1179,8 +1179,42 @@ export default function App() {
       <section className="py-24 bg-slate-50 border-t border-slate-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-white rounded-[3rem] p-12 border border-slate-100 shadow-sm relative overflow-hidden">
 
-          <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-8 shadow-sm">
-            <ShieldCheck className="w-12 h-12 text-green-600" />
+          {/* Custom 7-Day Guarantee Circular Badge */}
+          <div className="relative w-48 h-48 mx-auto mb-10 flex items-center justify-center rounded-full bg-gradient-to-b from-[#0a1120] to-[#040812] shadow-2xl border border-slate-800">
+            {/* Outermost subtle dashes */}
+            <svg className="absolute inset-0 w-full h-full animate-[spin_40s_linear_infinite]" viewBox="0 0 200 200">
+              <circle cx="100" cy="100" r="92" fill="none" stroke="#ab8131" strokeWidth="1" strokeDasharray="2 6" opacity="0.3" />
+            </svg>
+
+            {/* Outer solid thin ring */}
+            <svg className="absolute inset-0 w-full h-full" viewBox="0 0 200 200">
+              <circle cx="100" cy="100" r="82" fill="none" stroke="#ab8131" strokeWidth="0.5" opacity="0.4" />
+            </svg>
+
+            {/* Rotating Text using SVG */}
+            <svg className="absolute inset-0 w-full h-full animate-[spin_25s_linear_infinite]" viewBox="0 0 200 200">
+              <defs>
+                <path id="textCircle" d="M 100, 26 A 74,74 0 1,1 99.9,26" />
+              </defs>
+              <text fill="#d8b058" fontSize="13" fontWeight="bold" letterSpacing="4.5">
+                <textPath href="#textCircle" startOffset="0%">
+                  7 DIAS DE GARANTIA • 7 DIAS DE GARANTIA •
+                </textPath>
+              </text>
+            </svg>
+
+            {/* Inner dashes */}
+            <svg className="absolute inset-0 w-full h-full animate-[spin_35s_linear_infinite_reverse]" viewBox="0 0 200 200">
+              <circle cx="100" cy="100" r="48" fill="none" stroke="#d8b058" strokeWidth="2" strokeDasharray="4 6" opacity="0.8" />
+            </svg>
+
+            {/* Additional inner glow */}
+            <div className="absolute inset-0 rounded-full bg-[#d8b058]/5 blur-xl pointer-events-none"></div>
+
+            {/* Center Number */}
+            <div className="relative z-10 font-bold text-[4rem] bg-gradient-to-b from-[#fde68a] to-[#ab8131] bg-clip-text text-transparent transform translate-y-1 drop-shadow-lg leading-none tracking-tighter">
+              7
+            </div>
           </div>
 
           <h2 className="text-3xl font-bold text-slate-900 mb-6 relative z-10">Risco Zero: 7 Dias de Garantia</h2>
