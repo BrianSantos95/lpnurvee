@@ -961,37 +961,74 @@ export default function App() {
           </div>
 
           {/* Mobile System Visualization */}
-          <div className="md:hidden flex flex-col items-center gap-6">
-            <div className="bg-[#020408] border border-[#004cf2] shadow-[0_0_30px_rgba(0,76,242,0.3)] rounded-2xl py-8 px-6 w-full max-w-sm text-center relative overflow-hidden mb-4">
+          <div className="md:hidden flex flex-col items-center gap-2 mt-4">
+            <div className="bg-[#020408] border border-[#004cf2] shadow-[0_0_30px_rgba(0,76,242,0.3)] rounded-2xl py-8 px-6 w-[95%] text-center relative overflow-hidden mb-6 z-20 mx-auto">
               <div className="absolute inset-0 bg-[#004cf2]/5 animate-pulse"></div>
               <h3 className="text-white font-black text-2xl mb-4 tracking-widest uppercase relative z-10">NURVEE</h3>
               <p className="text-white font-bold text-xs uppercase tracking-widest mb-2 relative z-10">O PROCESSADOR DA SUA OPERAÇÃO</p>
               <p className="text-slate-400 text-[10px] uppercase tracking-wider relative z-10">Centraliza. Analisa. Conecta. Projeta.</p>
             </div>
 
-            <div className="grid grid-cols-2 gap-3 w-full">
-              {[
-                { title: "FINANCEIRO", desc: "Entradas. Saídas. Lucro. Margem." },
-                { title: "VENDAS (PDV)", desc: "Registro rápido. Caixa. Movimentações." },
-                { title: "ESTOQUE", desc: "Produtos. Alertas. Curva ABC." },
-                { title: "CLIENTES", desc: "Histórico. Frequência. Ticket." },
-                { title: "PRECIFICAÇÃO", desc: "Custos. Markup. Preço Ideal." },
-                { title: "METAS", desc: "Progresso. Motivação da equipe." },
-                { title: "RELATÓRIOS", desc: "DRE. Indicadores estratégicos." },
-                { title: "FORNECEDORES", desc: "Controle de Compras. Prazos." },
-              ].map((node, i) => (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+            <div className="relative w-full px-2">
+              {/* Connecting Lines Background (Mobile) */}
+              <svg className="absolute inset-0 w-full h-full pointer-events-none z-0" style={{ top: '-1.5rem', height: 'calc(100% + 1.5rem)' }}>
+                <motion.line
+                  initial={{ pathLength: 0, opacity: 0 }}
+                  whileInView={{ pathLength: 1, opacity: 1 }}
                   viewport={{ once: false }}
-                  transition={{ delay: i * 0.05 }}
-                  key={i}
-                  className="bg-[#0A1120] border border-slate-800 rounded-xl p-4 text-center"
-                >
-                  <h4 className="text-[#004cf2] font-black text-xs uppercase tracking-wider mb-2">{node.title}</h4>
-                  <p className="text-slate-400 text-[10px]">{node.desc}</p>
-                </motion.div>
-              ))}
+                  transition={{ duration: 1.5 }}
+                  x1="50%" y1="0" x2="50%" y2="90%"
+                  stroke="#004cf2" strokeOpacity="0.4" strokeWidth="1" strokeDasharray="4 4"
+                />
+
+                {[12.5, 37.5, 62.5, 87.5].map((y, i) => (
+                  <React.Fragment key={i}>
+                    {/* Linha pro item da Esquerda */}
+                    <motion.line
+                      initial={{ pathLength: 0, opacity: 0 }}
+                      whileInView={{ pathLength: 1, opacity: 1 }}
+                      viewport={{ once: false }}
+                      transition={{ duration: 0.8, delay: 0.3 * (i + 1) }}
+                      x1="50%" y1={`${y}%`} x2="25%" y2={`${y}%`}
+                      stroke="#004cf2" strokeOpacity="0.4" strokeWidth="1" strokeDasharray="4 4"
+                    />
+                    {/* Linha pro item da Direita */}
+                    <motion.line
+                      initial={{ pathLength: 0, opacity: 0 }}
+                      whileInView={{ pathLength: 1, opacity: 1 }}
+                      viewport={{ once: false }}
+                      transition={{ duration: 0.8, delay: 0.3 * (i + 1) }}
+                      x1="50%" y1={`${y}%`} x2="75%" y2={`${y}%`}
+                      stroke="#004cf2" strokeOpacity="0.4" strokeWidth="1" strokeDasharray="4 4"
+                    />
+                  </React.Fragment>
+                ))}
+              </svg>
+
+              <div className="grid grid-cols-2 gap-3 gap-y-12 w-full relative z-10">
+                {[
+                  { title: "FINANCEIRO", desc: "Entradas. Saídas. Lucro. Margem." },
+                  { title: "VENDAS (PDV)", desc: "Registro rápido. Caixa. Movimentações." },
+                  { title: "ESTOQUE", desc: "Produtos. Alertas. Curva ABC." },
+                  { title: "CLIENTES", desc: "Histórico. Frequência. Ticket." },
+                  { title: "PRECIFICAÇÃO", desc: "Custos. Markup. Preço Ideal." },
+                  { title: "METAS", desc: "Progresso. Motivação da equipe." },
+                  { title: "RELATÓRIOS", desc: "DRE. Indicadores estratégicos." },
+                  { title: "FORNECEDORES", desc: "Controle de Compras. Prazos." },
+                ].map((node, i) => (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false }}
+                    transition={{ delay: i * 0.05 }}
+                    key={i}
+                    className="bg-[#0A1120]/90 backdrop-blur-md border border-slate-800 rounded-xl p-4 text-center hover:border-[#004cf2]/40 transition-colors shadow-lg"
+                  >
+                    <h4 className="text-[#004cf2] font-black text-[11px] uppercase tracking-wider mb-2 leading-tight">{node.title}</h4>
+                    <p className="text-slate-400 text-[10px] leading-tight">{node.desc}</p>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
