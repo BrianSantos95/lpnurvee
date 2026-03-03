@@ -246,7 +246,7 @@ export default function App() {
               <span className="text-blue-100 opacity-90">Decisões com clareza.</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-blue-100/90 mb-10 leading-relaxed max-w-2xl font-medium">
+            <p className="text-lg md:text-xl text-blue-100/90 mb-10 leading-relaxed max-w-2xl mx-auto font-medium [text-wrap:balance]">
               Como Controlar Cada Centavo da Sua Loja, Evitar a Falta de Estoque e Descobrir Seu Lucro Real – Sem Tocar em Nenhuma Planilha.
             </p>
 
@@ -277,9 +277,8 @@ export default function App() {
       <section className="relative z-20 px-4 bg-slate-900 pt-20 pb-8 md:pt-28 md:pb-16 border-t border-slate-800/80">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
-              Tenha em mãos tudo que precisa <br className="hidden md:block" />
-              <span className="text-[#004cf2] drop-shadow-[0_0_15px_rgba(0,76,242,0.4)]">para a sua loja crescer</span>
+            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight [text-wrap:balance] max-w-3xl mx-auto">
+              Tenha em mãos tudo que precisa para a <span className="text-[#004cf2] drop-shadow-[0_0_15px_rgba(0,76,242,0.4)] whitespace-nowrap">sua loja crescer</span>
             </h2>
           </div>
 
@@ -604,8 +603,8 @@ export default function App() {
       <section className="py-24 md:py-32 bg-slate-900 relative">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
-            <h2 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight">
-              Você realmente controla <span className="text-[#004cf2] drop-shadow-[0_0_15px_rgba(0,76,242,0.5)]">a sua loja?</span>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight [text-wrap:balance] max-w-3xl mx-auto">
+              Você realmente controla <span className="text-[#004cf2] drop-shadow-[0_0_15px_rgba(0,76,242,0.5)] whitespace-nowrap">a sua loja?</span>
             </h2>
           </div>
 
@@ -738,10 +737,10 @@ export default function App() {
 
           {/* Bottom Area */}
           <div className="text-center max-w-3xl mx-auto">
-            <p className="text-slate-400 text-lg mb-6">Se você respondeu <strong className="text-white">"sim"</strong> para 2 ou mais perguntas...</p>
-            <h3 className="text-4xl md:text-5xl font-extrabold text-white mb-10 tracking-tight leading-tight">
-              Sua loja não está crescendo.<br />
-              <span className="text-[#004cf2] drop-shadow-[0_0_15px_rgba(0,76,242,0.4)]">Está sobrevivendo.</span>
+            <p className="text-slate-400 text-lg mb-6 [text-wrap:balance]">Se você respondeu <strong className="text-white">"sim"</strong> para 2 ou mais perguntas...</p>
+            <h3 className="text-4xl md:text-5xl font-extrabold text-white mb-10 tracking-tight leading-tight [text-wrap:balance]">
+              Sua loja não está crescendo.<br className="hidden md:block" />
+              <span className="text-[#004cf2] drop-shadow-[0_0_15px_rgba(0,76,242,0.4)] whitespace-nowrap md:ml-3">Está sobrevivendo.</span>
             </h3>
 
             <a href="#oferta" className="block w-full sm:w-max mt-4 mx-auto">
@@ -880,10 +879,10 @@ export default function App() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,76,242,0.06)_0%,rgba(0,0,0,0)_60%)]"></div>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20 md:mb-32">
-            <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-4">
-              Sua loja funciona como um <span className="text-[#004cf2] drop-shadow-[0_0_20px_rgba(0,76,242,0.4)] relative">sistema</span>
+            <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-4 [text-wrap:balance] max-w-3xl mx-auto">
+              Sua loja funciona como <span className="text-[#004cf2] drop-shadow-[0_0_20px_rgba(0,76,242,0.4)] relative whitespace-nowrap">um sistema</span>
             </h2>
-            <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+            <p className="text-slate-400 text-lg max-w-2xl mx-auto [text-wrap:balance]">
               Cada área da sua loja gera dados importantes. Todos eles passam e são guiados pelo Nurvee.
             </p>
           </div>
@@ -1204,11 +1203,11 @@ export default function App() {
                 <Target className="w-4 h-4 text-blue-300" /> Assuma o controle da sua loja
               </span>
 
-              <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight max-w-2xl text-white">
+              <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight max-w-2xl text-white [text-wrap:balance]">
                 Pare de perder tempo com planilhas e cadernos.
               </h2>
 
-              <p className="text-blue-100 text-lg md:text-xl mb-10 max-w-xl mx-auto leading-relaxed">
+              <p className="text-blue-100 text-lg md:text-xl mb-10 max-w-xl mx-auto leading-relaxed [text-wrap:balance]">
                 Faça sua assinatura agora. Pare de perder dinheiro com estoque parado e tenha o controle financeiro que a sua loja merece.
               </p>
 
