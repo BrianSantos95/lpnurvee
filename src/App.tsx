@@ -1212,7 +1212,9 @@ export default function App() {
             </div>
           </div>
 
-          <h2 className="text-3xl font-bold text-slate-900 mb-6 relative z-10">Risco Zero: 7 Dias de Garantia</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-6 relative z-10">
+            <span className="bg-gradient-to-r from-[#004cf2] to-blue-400 bg-clip-text text-transparent">Risco Zero:</span> 7 Dias de Garantia
+          </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed relative z-10">
             Assine agora, cadastre seus produtos, teste os painéis e conheça a plataforma. Se você não se adaptar ou achar que voltar pro caderninho é melhor, devolvemos 100% do seu pagamento na mesma hora.
           </p>
