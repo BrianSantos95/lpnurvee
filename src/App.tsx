@@ -237,7 +237,11 @@ export default function App() {
             className="flex flex-col items-center"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-md text-sm font-semibold mb-8 text-blue-50">
-              <Store className="w-4 h-4 text-emerald-300" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-[#081b4b]">
+                <path d="m22 13-10-5-10 5" />
+                <path d="M2 13h20" />
+                <path d="M12 8V4a2 2 0 0 1 2-2" />
+              </svg>
               Feito para quem vende roupa
             </div>
 
