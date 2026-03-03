@@ -651,7 +651,7 @@ export default function App() {
               </div>
               <div className="w-full">
                 <p className="text-[#004cf2] font-bold text-sm mb-2 uppercase tracking-wide">NURVEE RESOLVE:</p>
-                <p className="text-sm text-slate-300">Guardião de estoque com alertas preditivos de produtos com risco de falta.</p>
+                <p className="text-sm text-slate-300">Monitoramento inteligente de estoque com alertas preditivos de produtos com risco de falta.</p>
               </div>
             </div>
 
@@ -847,7 +847,7 @@ export default function App() {
             <div className="divide-y divide-slate-700/30">
               {[
                 { label: "Dashboard financeiro com lucro real diário", others: "partial" },
-                { label: "Guardião de estoque com alertas antecipados", others: "no" },
+                { label: "Monitoramento inteligente de estoque com alertas antecipados", others: "no" },
                 { label: "Ranking de produtos baseados na margem de lucro", others: "no" },
                 { label: "Fluxo de caixa sem misturar contas pessoais", others: "partial" },
                 { label: "Registro rápido de vendas no celular (PDV)", others: "no" },
