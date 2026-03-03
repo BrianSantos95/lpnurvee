@@ -1050,73 +1050,82 @@ export default function App() {
         {/* Marquee Wrapper */}
         <div className="flex flex-col gap-6 relative w-full overflow-hidden">
           {/* Fading Edges */}
-          <div className="absolute inset-y-0 left-0 w-32 md:w-64 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute inset-y-0 right-0 w-32 md:w-64 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute inset-y-0 left-0 w-16 md:w-48 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute inset-y-0 right-0 w-16 md:w-48 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none"></div>
 
           {/* Row 1: Moving Left */}
-          <div className="flex w-max animate-[marquee_50s_linear_infinite] hover:[animation-play-state:paused] gap-6 px-3">
-            {[
-              { name: "Mariana Silveira", role: "Dona de Boutique • SP", text: "Antes eu achava que estava empatando. O Nurvee me mostrou que alguns produtos consumiam toda a minha margem. No mês seguinte que os cortei, meu lucro dobrou.", avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=150&h=150" },
-              { name: "Carla Mendes", role: "Empreendedora • RJ", text: "Eu perdia 2 horas todo dia na planilha. Agora eu aperto um botão e vejo tudo que entrou de PIX e Cartão. A paz de espírito não tem preço !", avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=150&h=150" },
-              { name: "Juliana Costa", role: "Lojista • MG", text: "Sempre tive medo de investir em anúncios, mas agora com o fluxo de caixa certinho e sabendo o lucro real, faço isso com a maior segurança.", avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150&h=150" },
-              { name: "Amanda Silva", role: "Dona de Loja Infantil • SC", text: "A facilidade de controlar o estoque e PDV na mesma tela me economizou o preço de um funcionário. Indico pra todo mundo.", avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150" },
-              { name: "Mariana Silveira", role: "Dona de Boutique • SP", text: "Antes eu achava que estava empatando. O Nurvee me mostrou que alguns produtos consumiam toda a minha margem. No mês seguinte que os cortei, meu lucro dobrou.", avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=150&h=150" },
-              { name: "Carla Mendes", role: "Empreendedora • RJ", text: "Eu perdia 2 horas todo dia na planilha. Agora eu aperto um botão e vejo tudo que entrou de PIX e Cartão. A paz de espírito não tem preço !", avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=150&h=150" },
-              { name: "Juliana Costa", role: "Lojista • MG", text: "Sempre tive medo de investir em anúncios, mas agora com o fluxo de caixa certinho e sabendo o lucro real, faço isso com a maior segurança.", avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150&h=150" },
-              { name: "Amanda Silva", role: "Dona de Loja Infantil • SC", text: "A facilidade de controlar o estoque e PDV na mesma tela me economizou o preço de um funcionário. Indico pra todo mundo.", avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150" },
-            ].map((node, i) => (
-              <div key={i} className="w-[320px] md:w-[400px] bg-white rounded-3xl p-6 shadow-sm border border-slate-100 flex flex-col shrink-0 transform transition-transform duration-300 hover:scale-[1.02]">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-4">
-                    <img src={node.avatar} className="w-12 h-12 rounded-full object-cover shadow-sm bg-slate-100" alt={node.name} />
-                    <div>
-                      <h4 className="font-bold text-slate-800 text-sm">{node.name}</h4>
-                      <p className="text-xs text-slate-500">{node.role}</p>
+          <div className="flex w-full overflow-hidden group">
+            {/* We render exactly 2 identical tracks side by side */}
+            {[0, 1].map((trackIdx) => (
+              <div key={trackIdx} className="flex shrink-0 animate-[marquee_50s_linear_infinite] group-hover:[animation-play-state:paused] gap-6 px-3" aria-hidden={trackIdx === 1 ? 'true' : 'false'}>
+                {[
+                  { name: "Mariana Silveira", role: "Dona de Boutique • SP", text: "Antes eu achava que estava empatando. O Nurvee me mostrou que alguns produtos consumiam toda a minha margem. No mês seguinte que os cortei, meu lucro dobrou.", avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=150&h=150" },
+                  { name: "Carla Mendes", role: "Empreendedora • RJ", text: "Eu perdia 2 horas todo dia na planilha. Agora eu aperto um botão e vejo tudo que entrou de PIX e Cartão. A paz de espírito não tem preço !", avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=150&h=150" },
+                  { name: "Juliana Costa", role: "Lojista • MG", text: "Sempre tive medo de investir em anúncios, mas agora com o fluxo de caixa certinho e sabendo o lucro real, faço isso com a maior segurança.", avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150&h=150" },
+                  { name: "Amanda Silva", role: "Dona de Loja Infantil • SC", text: "A facilidade de controlar o estoque e PDV na mesma tela me economizou o preço de um funcionário. Indico pra todo mundo.", avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150" },
+                  { name: "Mariana Silveira", role: "Dona de Boutique • SP", text: "Antes eu achava que estava empatando. O Nurvee me mostrou que alguns produtos consumiam toda a minha margem. No mês seguinte que os cortei, meu lucro dobrou.", avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=150&h=150" },
+                  { name: "Carla Mendes", role: "Empreendedora • RJ", text: "Eu perdia 2 horas todo dia na planilha. Agora eu aperto um botão e vejo tudo que entrou de PIX e Cartão. A paz de espírito não tem preço !", avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=150&h=150" },
+                  { name: "Juliana Costa", role: "Lojista • MG", text: "Sempre tive medo de investir em anúncios, mas agora com o fluxo de caixa certinho e sabendo o lucro real, faço isso com a maior segurança.", avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150&h=150" },
+                  { name: "Amanda Silva", role: "Dona de Loja Infantil • SC", text: "A facilidade de controlar o estoque e PDV na mesma tela me economizou o preço de um funcionário. Indico pra todo mundo.", avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150" },
+                ].map((node, i) => (
+                  <div key={i} className="w-[320px] md:w-[400px] bg-white rounded-3xl p-6 shadow-sm border border-slate-100 flex flex-col shrink-0 transform transition-transform duration-300 hover:scale-[1.02]">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center gap-4">
+                        <img src={node.avatar} className="w-12 h-12 rounded-full object-cover shadow-sm bg-slate-100" alt={node.name} />
+                        <div>
+                          <h4 className="font-bold text-slate-800 text-sm">{node.name}</h4>
+                          <p className="text-xs text-slate-500">{node.role}</p>
+                        </div>
+                      </div>
+                      <div className="flex gap-0.5 text-[#d8b058]">
+                        <Star className="w-4 h-4 fill-current" />
+                        <Star className="w-4 h-4 fill-current" />
+                        <Star className="w-4 h-4 fill-current" />
+                        <Star className="w-4 h-4 fill-current" />
+                        <Star className="w-4 h-4 fill-current" />
+                      </div>
                     </div>
+                    <p className="text-slate-600 text-sm md:text-base leading-relaxed mt-2">"{node.text}"</p>
                   </div>
-                  <div className="flex gap-0.5 text-[#d8b058]">
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                  </div>
-                </div>
-                <p className="text-slate-600 text-sm md:text-base leading-relaxed mt-2">"{node.text}"</p>
+                ))}
               </div>
             ))}
           </div>
 
           {/* Row 2: Moving Right */}
-          <div className="flex w-max animate-[marquee-reverse_40s_linear_infinite] hover:[animation-play-state:paused] gap-6 px-3">
-            {[
-              { name: "Bárbara Leão", role: "Empreendedora • MG", text: "O suporte é simplesmente impecável. Sempre que precisamos de algo, a equipe está disponível com um sorriso no rosto. Vale cada centavo.", avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=150&h=150" },
-              { name: "Luiza Moreira", role: "Moda Íntima • SP", text: "Não sou a melhor com tecnologia, mas o Nurvee é tão visual que nem precisei de treinamento. A equipe toda já acostumou rapidinho.", avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150&h=150" },
-              { name: "Rafael Torres", role: "Multimarcas • RS", text: "Conseguimos cortar gastos invisíveis com a curva ABC. Saber quem são meus melhores clientes também mudou nosso jogo de vendas.", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150&h=150" },
-              { name: "Cláudia Vieira", role: "Dona de Loja de Calçados", text: "Minha grande dor era não saber onde estava o dinheiro. A plataforma clareou meus números, hoje eu fecho o mês muito tranquila.", avatar: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=150&h=150" },
-              { name: "Bárbara Leão", role: "Empreendedora • MG", text: "O suporte é simplesmente impecável. Sempre que precisamos de algo, a equipe está disponível com um sorriso no rosto. Vale cada centavo.", avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=150&h=150" },
-              { name: "Luiza Moreira", role: "Moda Íntima • SP", text: "Não sou a melhor com tecnologia, mas o Nurvee é tão visual que nem precisei de treinamento. A equipe toda já acostumou rapidinho.", avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150&h=150" },
-              { name: "Rafael Torres", role: "Multimarcas • RS", text: "Conseguimos cortar gastos invisíveis com a curva ABC. Saber quem são meus melhores clientes também mudou nosso jogo de vendas.", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150&h=150" },
-              { name: "Cláudia Vieira", role: "Dona de Loja de Calçados", text: "Minha grande dor era não saber onde estava o dinheiro. A plataforma clareou meus números, hoje eu fecho o mês muito tranquila.", avatar: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=150&h=150" },
-            ].map((node, i) => (
-              <div key={i} className="w-[320px] md:w-[400px] bg-white rounded-3xl p-6 shadow-sm border border-slate-100 flex flex-col shrink-0 transform transition-transform duration-300 hover:scale-[1.02]">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-4">
-                    <img src={node.avatar} className="w-12 h-12 rounded-full object-cover shadow-sm bg-slate-100" alt={node.name} />
-                    <div>
-                      <h4 className="font-bold text-slate-800 text-sm">{node.name}</h4>
-                      <p className="text-xs text-slate-500">{node.role}</p>
+          <div className="flex w-full overflow-hidden group">
+            {[0, 1].map((trackIdx) => (
+              <div key={trackIdx} className="flex shrink-0 animate-[marquee-reverse_40s_linear_infinite] group-hover:[animation-play-state:paused] gap-6 px-3" aria-hidden={trackIdx === 1 ? 'true' : 'false'}>
+                {[
+                  { name: "Bárbara Leão", role: "Empreendedora • MG", text: "O suporte é simplesmente impecável. Sempre que precisamos de algo, a equipe está disponível com um sorriso no rosto. Vale cada centavo.", avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=150&h=150" },
+                  { name: "Luiza Moreira", role: "Moda Íntima • SP", text: "Não sou a melhor com tecnologia, mas o Nurvee é tão visual que nem precisei de treinamento. A equipe toda já acostumou rapidinho.", avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150&h=150" },
+                  { name: "Rafael Torres", role: "Multimarcas • RS", text: "Conseguimos cortar gastos invisíveis com a curva ABC. Saber quem são meus melhores clientes também mudou nosso jogo de vendas.", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150&h=150" },
+                  { name: "Cláudia Vieira", role: "Dona de Loja de Calçados", text: "Minha grande dor era não saber onde estava o dinheiro. A plataforma clareou meus números, hoje eu fecho o mês muito tranquila.", avatar: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=150&h=150" },
+                  { name: "Bárbara Leão", role: "Empreendedora • MG", text: "O suporte é simplesmente impecável. Sempre que precisamos de algo, a equipe está disponível com um sorriso no rosto. Vale cada centavo.", avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=150&h=150" },
+                  { name: "Luiza Moreira", role: "Moda Íntima • SP", text: "Não sou a melhor com tecnologia, mas o Nurvee é tão visual que nem precisei de treinamento. A equipe toda já acostumou rapidinho.", avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150&h=150" },
+                  { name: "Rafael Torres", role: "Multimarcas • RS", text: "Conseguimos cortar gastos invisíveis com a curva ABC. Saber quem são meus melhores clientes também mudou nosso jogo de vendas.", avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150&h=150" },
+                  { name: "Cláudia Vieira", role: "Dona de Loja de Calçados", text: "Minha grande dor era não saber onde estava o dinheiro. A plataforma clareou meus números, hoje eu fecho o mês muito tranquila.", avatar: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=150&h=150" },
+                ].map((node, i) => (
+                  <div key={i} className="w-[320px] md:w-[400px] bg-white rounded-3xl p-6 shadow-sm border border-slate-100 flex flex-col shrink-0 transform transition-transform duration-300 hover:scale-[1.02]">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center gap-4">
+                        <img src={node.avatar} className="w-12 h-12 rounded-full object-cover shadow-sm bg-slate-100" alt={node.name} />
+                        <div>
+                          <h4 className="font-bold text-slate-800 text-sm">{node.name}</h4>
+                          <p className="text-xs text-slate-500">{node.role}</p>
+                        </div>
+                      </div>
+                      <div className="flex gap-0.5 text-[#d8b058]">
+                        <Star className="w-4 h-4 fill-current" />
+                        <Star className="w-4 h-4 fill-current" />
+                        <Star className="w-4 h-4 fill-current" />
+                        <Star className="w-4 h-4 fill-current" />
+                        <Star className="w-4 h-4 fill-current" />
+                      </div>
                     </div>
+                    <p className="text-slate-600 text-sm md:text-base leading-relaxed mt-2">"{node.text}"</p>
                   </div>
-                  <div className="flex gap-0.5 text-[#d8b058]">
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                  </div>
-                </div>
-                <p className="text-slate-600 text-sm md:text-base leading-relaxed mt-2">"{node.text}"</p>
+                ))}
               </div>
             ))}
           </div>
