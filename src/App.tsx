@@ -1037,9 +1037,8 @@ export default function App() {
       {/* 6. PROVA SOCIAL (Testimonials - Marquee) */}
       <section className="py-24 bg-slate-50 border-t border-slate-200 overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 text-center relative z-20">
-          <span className="text-emerald-500 font-bold tracking-wider uppercase text-sm mb-4 block">
-            <span className="mr-1">🏆</span>
-            Quem usa, recomenda
+          <span className="text-[#004cf2] font-bold tracking-wider uppercase text-sm mb-6 inline-flex items-center gap-2 bg-blue-50 py-1.5 px-4 rounded-full border border-blue-100">
+            <span className="text-base leading-none translate-y-[-1px]">🏆</span> Quem usa, recomenda
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight [text-wrap:balance]">
             Seja a próxima loja a <span className="text-[#004cf2] whitespace-nowrap">multiplicar o&nbsp;lucro!</span>
