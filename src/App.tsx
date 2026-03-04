@@ -247,17 +247,18 @@ export default function App() {
         </div>
 
         {/* Floating Dashboard Cards - LEFT */}
-        <div className="hidden lg:flex flex-col gap-6 absolute left-[1%] xl:left-[4%] 2xl:left-[8%] top-[15%] w-[260px] z-0 pointer-events-none select-none opacity-80">
+        <div className="hidden lg:block absolute inset-y-0 left-0 w-1/3 max-w-[450px] z-0 pointer-events-none select-none">
+          {/* Top Nearest Text */}
           <motion.div
-            animate={{ y: [0, -15, 0] }}
+            animate={{ y: [0, -10, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            className="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 shadow-2xl"
+            className="absolute top-[20%] right-[10%] w-[220px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 bg-green-500/20 rounded-lg"><TrendingUp className="w-5 h-5 text-green-300" /></div>
+              <div className="p-2 bg-white/5 rounded-lg"><TrendingUp className="w-5 h-5 text-blue-200" /></div>
               <div>
-                <p className="text-white/60 text-[10px] font-semibold uppercase tracking-wider">Faturamento do Mês</p>
-                <p className="text-white font-bold text-lg">R$ 14.250,00</p>
+                <p className="text-white/50 text-[10px] font-semibold uppercase tracking-wider">Faturamento</p>
+                <p className="text-white/90 font-bold text-lg">R$ 14.250</p>
               </div>
             </div>
             <div className="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
@@ -265,84 +266,117 @@ export default function App() {
                 initial={{ width: 0 }}
                 animate={{ width: "75%" }}
                 transition={{ duration: 1.5, delay: 0.5 }}
-                className="h-full bg-green-400"
+                className="h-full bg-blue-300"
               />
             </div>
           </motion.div>
 
+          {/* Bottom Far Left */}
           <motion.div
-            animate={{ y: [0, 20, 0] }}
-            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-            className="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 shadow-2xl ml-8"
+            animate={{ y: [0, 15, 0] }}
+            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+            className="absolute top-[45%] left-[10%] w-[200px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
           >
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center shrink-0">
-                  <ShoppingCart className="w-4 h-4 text-blue-200" />
+                <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center shrink-0">
+                  <ShoppingCart className="w-4 h-4 text-white/70" />
                 </div>
-                <div className="text-xs font-medium text-white/90">Novos Pedidos</div>
+                <div className="text-xs font-medium text-white/80">Pedidos</div>
               </div>
-              <span className="text-green-300 font-bold text-xs bg-green-500/10 px-2 py-0.5 rounded">+12</span>
+              <span className="text-blue-100 font-bold text-[10px] bg-white/10 px-2 py-0.5 rounded">+12</span>
             </div>
-            <div className="flex gap-1.5 mt-2 max-w-full overflow-hidden px-1">
-              {[1, 2, 3, 4, 5, 6, 7].map((i) => (
+            <div className="flex gap-1.5 mt-2 max-w-full overflow-hidden px-1 items-end h-8">
+              {[1, 2, 3, 4, 5, 6].map((i) => (
                 <motion.div
                   key={i}
-                  initial={{ height: 10 }}
-                  animate={{ height: i > 4 ? [10, 24, 10] : [20, 32, 20] }}
+                  animate={{ height: i > 4 ? [12, 24, 12] : [16, 32, 16] }}
                   transition={{ duration: 3, repeat: Infinity, delay: i * 0.2 }}
-                  className={`w-3 rounded-sm ${i > 4 ? 'bg-white/20' : 'bg-blue-400/80'}`}
+                  className={`w-2.5 rounded-sm ${i > 4 ? 'bg-white/10' : 'bg-blue-300/80'}`}
                 />
               ))}
+            </div>
+          </motion.div>
+
+          {/* Bottom Nearest Text */}
+          <motion.div
+            animate={{ y: [0, -12, 0] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+            className="absolute top-[70%] right-[15%] w-[180px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
+          >
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center shrink-0">
+                <Users className="w-4 h-4 text-white/70" />
+              </div>
+              <div>
+                <p className="text-white/50 text-[9px] font-semibold uppercase tracking-wider">Clientes</p>
+                <p className="text-white/90 font-bold text-sm">+24 detectados</p>
+              </div>
             </div>
           </motion.div>
         </div>
 
         {/* Floating Dashboard Cards - RIGHT */}
-        <div className="hidden lg:flex flex-col gap-6 absolute right-[1%] xl:right-[4%] 2xl:right-[8%] top-[20%] w-[260px] z-0 pointer-events-none select-none opacity-80">
+        <div className="hidden lg:block absolute inset-y-0 right-0 w-1/3 max-w-[450px] z-0 pointer-events-none select-none">
+          {/* Top Far Right */}
           <motion.div
-            animate={{ y: [0, -20, 0] }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            className="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 shadow-2xl mr-8"
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 6.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+            className="absolute top-[18%] right-[10%] w-[180px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
           >
-            <div className="flex items-center gap-3 mb-2">
-              <div className="p-2 bg-red-500/20 rounded-lg"><AlertTriangle className="w-5 h-5 text-red-300" /></div>
+            <div className="flex items-center gap-3">
+              <div className="p-2 bg-white/5 rounded-lg"><LayoutDashboard className="w-4 h-4 text-blue-100" /></div>
               <div>
-                <p className="text-white/60 text-[10px] font-semibold uppercase tracking-wider">Alerta de Estoque</p>
-                <p className="text-white text-sm font-medium">Blusa Tricot (Preta)</p>
+                <p className="text-white/50 text-[9px] font-semibold uppercase tracking-wider">Sistema</p>
+                <p className="text-white/90 text-xs font-medium">100% Online</p>
               </div>
             </div>
-            <p className="text-red-300 text-xs font-semibold ml-11 mt-1">Apenas 2 und. restantes</p>
           </motion.div>
 
+          {/* Middle Nearest Text */}
           <motion.div
             animate={{ y: [0, 15, 0] }}
-            transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
-            className="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 shadow-2xl"
+            transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+            className="absolute top-[40%] left-[5%] w-[240px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
           >
-            <p className="text-white/60 text-[10px] font-semibold uppercase tracking-wider mb-4 flex items-center justify-between">
+            <p className="text-white/50 text-[10px] font-semibold uppercase tracking-wider mb-4 flex items-center justify-between">
               Top Produtos <TrendingUp className="w-3 h-3 text-blue-200" />
             </p>
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded bg-gradient-to-tr from-indigo-500/40 to-purple-500/40 border border-white/10"></div>
+                  <div className="w-8 h-8 rounded bg-white/5 border border-white/5"></div>
                   <div>
                     <span className="text-white/90 text-sm block">Vestido Longo</span>
-                    <span className="text-white/50 text-[10px] block">48 vendas</span>
+                    <span className="text-white/50 text-[9px] block">48 vendas</span>
                   </div>
                 </div>
-                <span className="text-green-300 text-xs font-medium">Estoque OK</span>
+                <span className="text-blue-200 text-xs font-medium">Estoque OK</span>
               </div>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded bg-gradient-to-tr from-emerald-500/40 to-teal-500/40 border border-white/10"></div>
+                  <div className="w-8 h-8 rounded bg-white/5 border border-white/5"></div>
                   <div>
                     <span className="text-white/90 text-sm block">Calça Wide Leg</span>
-                    <span className="text-white/50 text-[10px] block">32 vendas</span>
+                    <span className="text-white/50 text-[9px] block">32 vendas</span>
                   </div>
                 </div>
-                <span className="text-yellow-300 text-xs font-medium">Baixando</span>
+                <span className="text-white/50 text-xs font-medium">Baixando</span>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Bottom Far Right */}
+          <motion.div
+            animate={{ y: [0, -15, 0] }}
+            transition={{ duration: 7.5, repeat: Infinity, ease: "easeInOut", delay: 2.5 }}
+            className="absolute top-[65%] right-[20%] w-[180px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
+          >
+            <div className="flex items-center gap-3">
+              <div className="p-2 bg-blue-300/10 rounded-lg"><Wallet className="w-4 h-4 text-blue-200" /></div>
+              <div>
+                <p className="text-white/50 text-[9px] font-semibold uppercase tracking-wider">Ticket M.</p>
+                <p className="text-white/90 font-bold text-base">R$ 185,90</p>
               </div>
             </div>
           </motion.div>
