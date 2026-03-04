@@ -275,7 +275,7 @@ export default function App() {
           <motion.div
             animate={{ y: [0, 15, 0] }}
             transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            className="absolute top-[42%] right-[280px] xl:right-[400px] w-[200px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
+            className="absolute top-[36%] right-[260px] xl:right-[360px] w-[200px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
           >
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center gap-2">
@@ -337,7 +337,7 @@ export default function App() {
           <motion.div
             animate={{ y: [0, 15, 0] }}
             transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-            className="absolute top-[42%] left-[280px] xl:left-[400px] w-[240px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
+            className="absolute top-[34%] left-[260px] xl:left-[360px] w-[240px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
           >
             <p className="text-white/50 text-[10px] font-semibold uppercase tracking-wider mb-4 flex items-center justify-between">
               Top Produtos <TrendingUp className="w-3 h-3 text-blue-200" />
