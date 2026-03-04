@@ -1226,7 +1226,7 @@ export default function App() {
               </ul>
 
               <a
-                href={isAnnual ? "https://pay.kiwify.com.br/6H8QtFb" : "https://pay.kiwify.com.br/QiPSI1L"}
+                href={isAnnual ? "https://pay.kiwify.com.br/6H8QtFb" : "https://pay.kiwify.com.br/QiPSl1L"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-4 rounded-xl font-bold text-white bg-[#004cf2] hover:bg-blue-700 transition-colors shadow-lg shadow-[#004cf2]/30 text-center block"
