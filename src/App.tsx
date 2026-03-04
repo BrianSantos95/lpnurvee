@@ -1187,9 +1187,14 @@ export default function App() {
                 <li className="flex gap-3 text-slate-400 opacity-60"><X className="w-5 h-5 text-slate-300 shrink-0" /> <span className="line-through decoration-slate-300">Vitrine Online (Loja)</span></li>
               </ul>
 
-              <button className="w-full py-4 rounded-xl font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 transition-colors">
+              <a
+                href={isAnnual ? "https://pay.kiwify.com.br/0Cs1h3H" : "https://pay.kiwify.com.br/otDQDiC"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-4 rounded-xl font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 transition-colors text-center block"
+              >
                 Assinar Essencial
-              </button>
+              </a>
             </div>
 
             <div className="border-2 border-[#004cf2] rounded-3xl p-8 bg-white relative shadow-xl flex flex-col transform hover:-translate-y-1 transition-transform order-1 md:order-2">
@@ -1218,9 +1223,14 @@ export default function App() {
                 <li className="flex gap-3 text-slate-900 font-bold"><Check className="w-5 h-5 text-[#004cf2] shrink-0 font-bold" /> Vitrine Online (Loja) Integrada</li>
               </ul>
 
-              <button className="w-full py-4 rounded-xl font-bold text-white bg-[#004cf2] hover:bg-blue-700 transition-colors shadow-lg shadow-[#004cf2]/30">
+              <a
+                href={isAnnual ? "https://pay.kiwify.com.br/6H8QtFb" : "https://pay.kiwify.com.br/QiPSI1L"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-4 rounded-xl font-bold text-white bg-[#004cf2] hover:bg-blue-700 transition-colors shadow-lg shadow-[#004cf2]/30 text-center block"
+              >
                 Assinar Pro
-              </button>
+              </a>
             </div>
           </div>
         </div>
