@@ -251,7 +251,7 @@ export default function App() {
             </h1>
 
             <p className="text-lg md:text-xl text-blue-100/90 mb-10 leading-relaxed max-w-2xl mx-auto font-medium [text-wrap:balance]">
-              Como controlar cada centavo da sua loja, evitar a falta de estoque e descobrir seu lucro real, sem tocar em nenhuma&nbsp;planilha.
+              Controle cada centavo da sua loja, evite a falta de estoque e descubra seu lucro real, sem tocar em nenhuma&nbsp;planilha.
             </p>
 
             <a href="#oferta" className="block w-full sm:w-max mt-4 mx-auto">
@@ -271,7 +271,7 @@ export default function App() {
                 <img className="w-8 h-8 rounded-full border-2 border-[#004cf2]" src="https://i.pravatar.cc/100?img=3" alt="User" />
                 <img className="w-8 h-8 rounded-full border-2 border-[#004cf2]" src="https://i.pravatar.cc/100?img=4" alt="User" />
               </div>
-              <p className="text-sm font-medium text-blue-100 text-center">Testado e aprovado por <strong className="text-white">+ de 500 lojas</strong></p>
+              <p className="text-sm font-medium text-blue-100 text-center">Testado e aprovado por <strong className="text-white">+ de 30 lojas</strong></p>
             </div>
           </motion.div>
         </div>
@@ -628,7 +628,7 @@ export default function App() {
                 <p>Sem controle o dinheiro some.</p>
                 <p className="text-slate-200 font-semibold mt-4">Lucro não pode ser surpresa.</p>
               </div>
-              <div className="w-full">
+              <div className="w-full pt-6 border-t border-slate-700/50">
                 <p className="text-[#004cf2] font-bold text-sm mb-2 uppercase tracking-wide">NURVEE RESOLVE:</p>
                 <p className="text-sm text-slate-300">Dashboard financeiro com lucro líquido calculado automaticamente em tempo real.</p>
               </div>
@@ -649,7 +649,7 @@ export default function App() {
                 <p>Sem alertas você descobre tarde.</p>
                 <p className="text-slate-200 font-semibold mt-4">Produto em falta é dinheiro na mesa.</p>
               </div>
-              <div className="w-full">
+              <div className="w-full pt-6 border-t border-slate-700/50">
                 <p className="text-[#004cf2] font-bold text-sm mb-2 uppercase tracking-wide">NURVEE RESOLVE:</p>
                 <p className="text-sm text-slate-300">Monitoramento inteligente de estoque com alertas preditivos de produtos com risco de falta.</p>
               </div>
@@ -669,7 +669,7 @@ export default function App() {
                 <p>Sem previsão você assume riscos desnecessários.</p>
                 <p className="text-slate-200 font-semibold mt-4">Caixa desorganizado quebra margem.</p>
               </div>
-              <div className="w-full">
+              <div className="w-full pt-6 border-t border-slate-700/50">
                 <p className="text-[#004cf2] font-bold text-sm mb-2 uppercase tracking-wide">NURVEE RESOLVE:</p>
                 <p className="text-sm text-slate-300">Controle completo de despesas e receitas à prova de erros.</p>
               </div>
@@ -690,7 +690,7 @@ export default function App() {
                 <p>Furos nos cálculos acontecem diariamente.</p>
                 <p className="text-slate-200 font-semibold mt-4">Isso não escala.</p>
               </div>
-              <div className="w-full">
+              <div className="w-full pt-6 border-t border-slate-700/50">
                 <p className="text-[#004cf2] font-bold text-sm mb-2 uppercase tracking-wide">NURVEE RESOLVE:</p>
                 <p className="text-sm text-slate-300">PDV integrado e registro prático de vendas com poucos cliques.</p>
               </div>
@@ -711,7 +711,7 @@ export default function App() {
                 <p>Acha que faturou muito, mas não sobra dinheiro.</p>
                 <p className="text-slate-200 font-semibold mt-4">Gestão exige números.</p>
               </div>
-              <div className="w-full">
+              <div className="w-full pt-6 border-t border-slate-700/50">
                 <p className="text-[#004cf2] font-bold text-sm mb-2 uppercase tracking-wide">NURVEE RESOLVE:</p>
                 <p className="text-sm text-slate-300">Ranking automático dos produtos campeões que realmente dão lucro.</p>
               </div>
@@ -732,7 +732,7 @@ export default function App() {
                 <p>Atendimento robotizado, sem personalização.</p>
                 <p className="text-slate-200 font-semibold mt-4">Venda sem relacionamento trava.</p>
               </div>
-              <div className="w-full">
+              <div className="w-full pt-6 border-t border-slate-700/50">
                 <p className="text-[#004cf2] font-bold text-sm mb-2 uppercase tracking-wide">NURVEE RESOLVE:</p>
                 <p className="text-sm text-slate-300">CRM prático com histórico completo de compras de cada cliente.</p>
               </div>
@@ -741,7 +741,7 @@ export default function App() {
 
           {/* Bottom Area */}
           <div className="text-center max-w-3xl mx-auto">
-            <p className="text-slate-400 text-lg mb-6 [text-wrap:balance]">Se você respondeu <strong className="text-white">"sim"</strong> para 2 ou mais&nbsp;perguntas...</p>
+            <p className="text-slate-400 text-lg mb-6 [text-wrap:balance]">Se você se identificou com <strong className="text-white">pelo menos 2</strong> dessas&nbsp;situações...</p>
             <h3 className="text-4xl md:text-5xl font-extrabold text-white mb-10 tracking-tight leading-tight [text-wrap:balance]">
               Sua loja não está crescendo. <span className="text-[#004cf2] drop-shadow-[0_0_15px_rgba(0,76,242,0.4)] whitespace-nowrap">Está sobrevivendo.</span>
             </h3>
@@ -762,7 +762,7 @@ export default function App() {
       <section className="py-24 bg-white border-y border-slate-100">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-[#004cf2] font-bold tracking-wider uppercase text-sm mb-4 block bg-blue-50 py-1.5 px-4 rounded-full inline-block">Dúvidas Comuns</span>
+            <span className="text-[#004cf2] font-bold tracking-wider uppercase text-sm mb-4 block bg-blue-50 py-1.5 px-4 rounded-full inline-block">ZERO COMPLICAÇÃO</span>
             <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
               Dá para começar agora, <span className="text-[#004cf2]">mesmo&nbsp;que...</span>
             </h2>
@@ -1163,7 +1163,7 @@ export default function App() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 items-stretch max-w-3xl mx-auto text-left">
-            <div className="border border-slate-200 rounded-3xl p-8 bg-white relative shadow-sm flex flex-col">
+            <div className="border border-slate-200 rounded-3xl p-8 bg-white relative shadow-sm flex flex-col order-2 md:order-1">
               {isAnnual && (
                 <div className="absolute top-6 right-6 bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                   ECONOMIA DE R$ 134
@@ -1191,7 +1191,7 @@ export default function App() {
               </button>
             </div>
 
-            <div className="border-2 border-[#004cf2] rounded-3xl p-8 bg-white relative shadow-xl flex flex-col transform hover:-translate-y-1 transition-transform">
+            <div className="border-2 border-[#004cf2] rounded-3xl p-8 bg-white relative shadow-xl flex flex-col transform hover:-translate-y-1 transition-transform order-1 md:order-2">
               {isAnnual && (
                 <div className="absolute top-6 right-6 bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                   ECONOMIA DE R$ 194
