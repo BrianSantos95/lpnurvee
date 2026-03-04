@@ -1165,12 +1165,14 @@ export default function App() {
 
           <div className="grid md:grid-cols-2 gap-6 items-stretch max-w-3xl mx-auto text-left">
             <div className="border border-slate-200 rounded-3xl p-8 bg-white relative shadow-sm flex flex-col order-2 md:order-1">
-              {isAnnual && (
-                <div className="absolute top-6 right-6 bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                  ECONOMIA DE R$ 134
-                </div>
-              )}
-              <h3 className="text-2xl font-bold text-slate-900 mb-2 mt-4 md:mt-0">Essencial</h3>
+              <div className="flex flex-wrap items-center gap-2 mb-2 md:mt-0">
+                <h3 className="text-2xl font-bold text-slate-900 mr-2">Essencial</h3>
+                {isAnnual && (
+                  <div className="bg-green-100 text-green-700 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 rounded-full uppercase tracking-wider shrink-0">
+                    ECONOMIA DE R$ 134
+                  </div>
+                )}
+              </div>
               <div className="flex items-baseline gap-1 text-[#004cf2] mb-6">
                 <span className="text-xl font-bold text-slate-900">R$</span>
                 <span className="text-4xl font-bold">{isAnnual ? '670' : '67'}</span>
@@ -1198,14 +1200,14 @@ export default function App() {
             </div>
 
             <div className="border-2 border-[#004cf2] rounded-3xl p-8 bg-white relative shadow-xl flex flex-col transform hover:-translate-y-1 transition-transform order-1 md:order-2">
-              {isAnnual && (
-                <div className="absolute top-6 right-6 bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                  ECONOMIA DE R$ 194
-                </div>
-              )}
-              <div className="flex items-center gap-3 mb-2 mt-4 md:mt-0">
-                <h3 className="text-2xl font-bold text-slate-900">Pro</h3>
-                <span className="bg-[#004cf2] text-white text-xs font-bold px-2 py-1 rounded">RECOMENDADO</span>
+              <div className="flex flex-wrap items-center gap-2 mb-2 md:mt-0">
+                <h3 className="text-2xl font-bold text-slate-900 mr-2">Pro</h3>
+                <span className="bg-[#004cf2] text-white text-[10px] sm:text-xs font-bold px-2 py-1 rounded shrink-0">RECOMENDADO</span>
+                {isAnnual && (
+                  <div className="bg-green-100 text-green-700 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 rounded-full uppercase tracking-wider shrink-0">
+                    ECONOMIA DE R$ 194
+                  </div>
+                )}
               </div>
               <div className="flex items-baseline gap-1 text-[#004cf2] mb-6">
                 <span className="text-xl font-bold text-slate-900">R$</span>
