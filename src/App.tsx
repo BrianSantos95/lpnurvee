@@ -224,19 +224,19 @@ export default function App() {
 
 
       {/* 1. HERO SECTION */}
-      <section className="relative pt-24 pb-20 md:pt-32 md:pb-24 bg-[#030712] overflow-hidden text-white">
+      <section className="relative pt-24 pb-20 md:pt-32 md:pb-24 bg-[#004cf2] overflow-hidden text-white">
 
-        {/* Glow Effects - Top Center Emitting Blue Light */}
-        <div className="absolute -top-[20%] left-1/2 -translate-x-1/2 w-[90%] max-w-[1000px] h-[600px] bg-[#004cf2] opacity-30 blur-[120px] rounded-full pointer-events-none"></div>
+        {/* Glow Effects - Feixe de luz no topo */}
+        <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-full max-w-[1000px] h-[500px] bg-white opacity-25 blur-[120px] rounded-full pointer-events-none"></div>
 
-        {/* Dot Pattern Overlay */}
+        {/* Quadradinhos mais juntos (Matrix/Dot pattern com transparência) */}
         <div
-          className="absolute inset-0 pointer-events-none opacity-[0.15]"
+          className="absolute inset-0 pointer-events-none opacity-30"
           style={{
-            backgroundImage: 'radial-gradient(#0057ff 2px, transparent 2px)',
-            backgroundSize: '30px 30px',
-            maskImage: 'radial-gradient(ellipse 80% 80% at 50% 0%, black 10%, transparent 80%)',
-            WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at 50% 0%, black 10%, transparent 80%)'
+            backgroundImage: `radial-gradient(rgba(255, 255, 255, 0.5) 1.5px, transparent 1.5px)`,
+            backgroundSize: '16px 16px',
+            maskImage: 'radial-gradient(ellipse 70% 70% at 50% 0%, black 10%, transparent 70%)',
+            WebkitMaskImage: 'radial-gradient(ellipse 70% 70% at 50% 0%, black 10%, transparent 70%)'
           }}
         ></div>
 
