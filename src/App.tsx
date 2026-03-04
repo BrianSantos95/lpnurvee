@@ -246,6 +246,108 @@ export default function App() {
           <div className="absolute inset-0 w-full h-full bg-[#004cf2] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_0%,transparent_10%,black_100%)] pointer-events-none"></div>
         </div>
 
+        {/* Floating Dashboard Cards - LEFT */}
+        <div className="hidden lg:flex flex-col gap-6 absolute left-[1%] xl:left-[4%] 2xl:left-[8%] top-[15%] w-[260px] z-0 pointer-events-none select-none opacity-80">
+          <motion.div
+            animate={{ y: [0, -15, 0] }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+            className="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 shadow-2xl"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 bg-green-500/20 rounded-lg"><TrendingUp className="w-5 h-5 text-green-300" /></div>
+              <div>
+                <p className="text-white/60 text-[10px] font-semibold uppercase tracking-wider">Faturamento do Mês</p>
+                <p className="text-white font-bold text-lg">R$ 14.250,00</p>
+              </div>
+            </div>
+            <div className="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+              <motion.div
+                initial={{ width: 0 }}
+                animate={{ width: "75%" }}
+                transition={{ duration: 1.5, delay: 0.5 }}
+                className="h-full bg-green-400"
+              />
+            </div>
+          </motion.div>
+
+          <motion.div
+            animate={{ y: [0, 20, 0] }}
+            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+            className="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 shadow-2xl ml-8"
+          >
+            <div className="flex items-center justify-between mb-3">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center shrink-0">
+                  <ShoppingCart className="w-4 h-4 text-blue-200" />
+                </div>
+                <div className="text-xs font-medium text-white/90">Novos Pedidos</div>
+              </div>
+              <span className="text-green-300 font-bold text-xs bg-green-500/10 px-2 py-0.5 rounded">+12</span>
+            </div>
+            <div className="flex gap-1.5 mt-2 max-w-full overflow-hidden px-1">
+              {[1, 2, 3, 4, 5, 6, 7].map((i) => (
+                <motion.div
+                  key={i}
+                  initial={{ height: 10 }}
+                  animate={{ height: i > 4 ? [10, 24, 10] : [20, 32, 20] }}
+                  transition={{ duration: 3, repeat: Infinity, delay: i * 0.2 }}
+                  className={`w-3 rounded-sm ${i > 4 ? 'bg-white/20' : 'bg-blue-400/80'}`}
+                />
+              ))}
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Floating Dashboard Cards - RIGHT */}
+        <div className="hidden lg:flex flex-col gap-6 absolute right-[1%] xl:right-[4%] 2xl:right-[8%] top-[20%] w-[260px] z-0 pointer-events-none select-none opacity-80">
+          <motion.div
+            animate={{ y: [0, -20, 0] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            className="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 shadow-2xl mr-8"
+          >
+            <div className="flex items-center gap-3 mb-2">
+              <div className="p-2 bg-red-500/20 rounded-lg"><AlertTriangle className="w-5 h-5 text-red-300" /></div>
+              <div>
+                <p className="text-white/60 text-[10px] font-semibold uppercase tracking-wider">Alerta de Estoque</p>
+                <p className="text-white text-sm font-medium">Blusa Tricot (Preta)</p>
+              </div>
+            </div>
+            <p className="text-red-300 text-xs font-semibold ml-11 mt-1">Apenas 2 und. restantes</p>
+          </motion.div>
+
+          <motion.div
+            animate={{ y: [0, 15, 0] }}
+            transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
+            className="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 shadow-2xl"
+          >
+            <p className="text-white/60 text-[10px] font-semibold uppercase tracking-wider mb-4 flex items-center justify-between">
+              Top Produtos <TrendingUp className="w-3 h-3 text-blue-200" />
+            </p>
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded bg-gradient-to-tr from-indigo-500/40 to-purple-500/40 border border-white/10"></div>
+                  <div>
+                    <span className="text-white/90 text-sm block">Vestido Longo</span>
+                    <span className="text-white/50 text-[10px] block">48 vendas</span>
+                  </div>
+                </div>
+                <span className="text-green-300 text-xs font-medium">Estoque OK</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded bg-gradient-to-tr from-emerald-500/40 to-teal-500/40 border border-white/10"></div>
+                  <div>
+                    <span className="text-white/90 text-sm block">Calça Wide Leg</span>
+                    <span className="text-white/50 text-[10px] block">32 vendas</span>
+                  </div>
+                </div>
+                <span className="text-yellow-300 text-xs font-medium">Baixando</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
