@@ -224,7 +224,7 @@ export default function App() {
 
 
       {/* 1. HERO SECTION */}
-      <section className="relative pt-24 pb-20 md:pt-32 md:pb-24 bg-[#004cf2] text-white">
+      <section className="relative pt-24 pb-20 md:pt-32 md:pb-24 bg-gradient-to-br from-[#0057ff] via-[#004cf2] to-[#00175a] overflow-hidden text-white">
         {/* Glow Effects */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1000px] h-[500px] bg-white/10 blur-[120px] rounded-full pointer-events-none"></div>
         <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-indigo-500/30 blur-[150px] rounded-full pointer-events-none"></div>
