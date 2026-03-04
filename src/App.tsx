@@ -247,12 +247,12 @@ export default function App() {
         </div>
 
         {/* Floating Dashboard Cards - LEFT */}
-        <div className="hidden lg:block absolute inset-y-0 left-0 w-[40%] xl:w-[45%] z-0 pointer-events-none select-none">
+        <div className="hidden lg:block absolute inset-y-0 left-1/2 -ml-[480px] xl:-ml-[560px] w-[260px] z-0 pointer-events-none select-none">
           {/* Top Nearest Text */}
           <motion.div
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-[20%] right-[2%] xl:right-[5%] w-[220px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
+            className="absolute top-[20%] right-0 w-[220px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 bg-white/5 rounded-lg"><TrendingUp className="w-5 h-5 text-blue-200" /></div>
@@ -275,7 +275,7 @@ export default function App() {
           <motion.div
             animate={{ y: [0, 15, 0] }}
             transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            className="absolute top-[45%] left-[15%] xl:left-[25%] w-[200px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
+            className="absolute top-[45%] -left-[40px] w-[200px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
           >
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center gap-2">
@@ -302,7 +302,7 @@ export default function App() {
           <motion.div
             animate={{ y: [0, -12, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-            className="absolute top-[70%] right-[8%] xl:right-[15%] w-[180px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
+            className="absolute top-[70%] left-[20px] w-[180px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
           >
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center shrink-0">
@@ -317,12 +317,12 @@ export default function App() {
         </div>
 
         {/* Floating Dashboard Cards - RIGHT */}
-        <div className="hidden lg:block absolute inset-y-0 right-0 w-[40%] xl:w-[45%] z-0 pointer-events-none select-none">
+        <div className="hidden lg:block absolute inset-y-0 left-1/2 ml-[220px] xl:ml-[300px] w-[260px] z-0 pointer-events-none select-none">
           {/* Top Far Right */}
           <motion.div
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 6.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-            className="absolute top-[18%] right-[15%] xl:right-[25%] w-[180px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
+            className="absolute top-[18%] left-[60px] w-[180px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
           >
             <div className="flex items-center gap-3">
               <div className="p-2 bg-white/5 rounded-lg"><LayoutDashboard className="w-4 h-4 text-blue-100" /></div>
@@ -337,7 +337,7 @@ export default function App() {
           <motion.div
             animate={{ y: [0, 15, 0] }}
             transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-            className="absolute top-[40%] left-[2%] xl:left-[8%] w-[240px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
+            className="absolute top-[40%] left-0 w-[240px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
           >
             <p className="text-white/50 text-[10px] font-semibold uppercase tracking-wider mb-4 flex items-center justify-between">
               Top Produtos <TrendingUp className="w-3 h-3 text-blue-200" />
@@ -370,7 +370,7 @@ export default function App() {
           <motion.div
             animate={{ y: [0, -15, 0] }}
             transition={{ duration: 7.5, repeat: Infinity, ease: "easeInOut", delay: 2.5 }}
-            className="absolute top-[65%] right-[20%] xl:right-[30%] w-[180px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
+            className="absolute top-[65%] left-[80px] w-[180px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
           >
             <div className="flex items-center gap-3">
               <div className="p-2 bg-blue-300/10 rounded-lg"><Wallet className="w-4 h-4 text-blue-200" /></div>
