@@ -252,7 +252,7 @@ export default function App() {
           <motion.div
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-[20%] right-[240px] xl:right-[360px] w-[220px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
+            className="absolute top-[20%] right-[360px] xl:right-[460px] w-[220px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 bg-white/5 rounded-lg"><TrendingUp className="w-5 h-5 text-blue-200" /></div>
@@ -275,7 +275,7 @@ export default function App() {
           <motion.div
             animate={{ y: [0, 15, 0] }}
             transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            className="absolute top-[36%] right-[320px] xl:right-[440px] w-[200px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
+            className="absolute top-[36%] right-[400px] xl:right-[500px] w-[200px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
           >
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center gap-2">
@@ -302,7 +302,7 @@ export default function App() {
           <motion.div
             animate={{ y: [0, -12, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-            className="absolute top-[66%] right-[220px] xl:right-[320px] w-[180px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
+            className="absolute top-[66%] right-[320px] xl:right-[400px] w-[180px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
           >
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center shrink-0">
@@ -322,7 +322,7 @@ export default function App() {
           <motion.div
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 6.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-            className="absolute top-[20%] left-[260px] xl:left-[380px] w-[180px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
+            className="absolute top-[20%] left-[360px] xl:left-[460px] w-[180px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
           >
             <div className="flex items-center gap-3">
               <div className="p-2 bg-white/5 rounded-lg"><Wallet className="w-4 h-4 text-blue-100" /></div>
@@ -337,7 +337,7 @@ export default function App() {
           <motion.div
             animate={{ y: [0, 15, 0] }}
             transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-            className="absolute top-[34%] left-[320px] xl:left-[440px] w-[240px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
+            className="absolute top-[34%] left-[400px] xl:left-[500px] w-[240px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
           >
             <p className="text-white/50 text-[10px] font-semibold uppercase tracking-wider mb-4 flex items-center justify-between">
               Top Produtos <TrendingUp className="w-3 h-3 text-blue-200" />
@@ -370,7 +370,7 @@ export default function App() {
           <motion.div
             animate={{ y: [0, -15, 0] }}
             transition={{ duration: 7.5, repeat: Infinity, ease: "easeInOut", delay: 2.5 }}
-            className="absolute top-[65%] left-[240px] xl:left-[340px] w-[180px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
+            className="absolute top-[65%] left-[320px] xl:left-[400px] w-[180px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
           >
             <div className="flex items-center gap-3">
               <div className="p-2 bg-blue-300/10 rounded-lg"><TrendingUp className="w-4 h-4 text-blue-200" /></div>
