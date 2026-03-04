@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { SparklesCore } from './components/ui/sparkles';
 import {
   Store,
   ArrowRight,
@@ -227,18 +228,23 @@ export default function App() {
       <section className="relative pt-24 pb-20 md:pt-32 md:pb-24 bg-[#004cf2] overflow-hidden text-white">
 
         {/* Glow Effects - Feixe de luz no topo */}
-        <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-full max-w-[1000px] h-[500px] bg-white opacity-25 blur-[120px] rounded-full pointer-events-none"></div>
+        <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-full max-w-[1000px] h-[500px] bg-white opacity-25 blur-[120px] rounded-full pointer-events-none z-0"></div>
 
-        {/* Quadradinhos mais juntos (Matrix/Dot pattern com transparência) */}
-        <div
-          className="absolute inset-0 pointer-events-none opacity-30"
-          style={{
-            backgroundImage: `radial-gradient(rgba(255, 255, 255, 0.5) 1.5px, transparent 1.5px)`,
-            backgroundSize: '16px 16px',
-            maskImage: 'radial-gradient(ellipse 70% 70% at 50% 0%, black 10%, transparent 70%)',
-            WebkitMaskImage: 'radial-gradient(ellipse 70% 70% at 50% 0%, black 10%, transparent 70%)'
-          }}
-        ></div>
+        {/* Sparkles / Quadradinhos Background */}
+        <div className="absolute inset-0 w-full h-full z-0">
+          <SparklesCore
+            id="tsparticlesfullpage"
+            background="transparent"
+            minSize={0.6}
+            maxSize={1.4}
+            particleDensity={100}
+            className="w-full h-full"
+            particleColor="#FFFFFF"
+            speed={1}
+          />
+          {/* Radial Gradient overlay to blend it with our color */}
+          <div className="absolute inset-0 w-full h-full bg-[#004cf2] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_0%,transparent_10%,black_100%)] pointer-events-none"></div>
+        </div>
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <motion.div
