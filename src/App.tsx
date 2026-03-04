@@ -310,7 +310,7 @@ export default function App() {
               </div>
               <div>
                 <p className="text-white/50 text-[9px] font-semibold uppercase tracking-wider">Clientes</p>
-                <p className="text-white/90 font-bold text-sm">+24 detectados</p>
+                <p className="text-white/90 font-bold text-sm">+24 ativos no mês</p>
               </div>
             </div>
           </motion.div>
@@ -325,10 +325,10 @@ export default function App() {
             className="absolute top-[20%] left-[260px] xl:left-[380px] w-[180px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
           >
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-white/5 rounded-lg"><LayoutDashboard className="w-4 h-4 text-blue-100" /></div>
+              <div className="p-2 bg-white/5 rounded-lg"><Wallet className="w-4 h-4 text-blue-100" /></div>
               <div>
-                <p className="text-white/50 text-[9px] font-semibold uppercase tracking-wider">Sistema</p>
-                <p className="text-white/90 text-xs font-medium">100% Online</p>
+                <p className="text-white/50 text-[9px] font-semibold uppercase tracking-wider">Ticket Médio</p>
+                <p className="text-white/90 text-sm font-bold">R$ 185,90</p>
               </div>
             </div>
           </motion.div>
@@ -373,10 +373,10 @@ export default function App() {
             className="absolute top-[65%] left-[240px] xl:left-[340px] w-[180px] bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 border border-white/10 shadow-2xl"
           >
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-blue-300/10 rounded-lg"><Wallet className="w-4 h-4 text-blue-200" /></div>
+              <div className="p-2 bg-blue-300/10 rounded-lg"><TrendingUp className="w-4 h-4 text-blue-200" /></div>
               <div>
-                <p className="text-white/50 text-[9px] font-semibold uppercase tracking-wider">Ticket M.</p>
-                <p className="text-white/90 font-bold text-base">R$ 185,90</p>
+                <p className="text-white/50 text-[9px] font-semibold uppercase tracking-wider">Lucro Real</p>
+                <p className="text-white/90 font-bold text-base">R$ 5.420,00</p>
               </div>
             </div>
           </motion.div>
