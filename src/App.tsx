@@ -224,10 +224,21 @@ export default function App() {
 
 
       {/* 1. HERO SECTION */}
-      <section className="relative pt-24 pb-20 md:pt-32 md:pb-24 bg-gradient-to-br from-[#0057ff] via-[#004cf2] to-[#00175a] overflow-hidden text-white">
-        {/* Glow Effects */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1000px] h-[500px] bg-white/10 blur-[120px] rounded-full pointer-events-none"></div>
-        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-indigo-500/30 blur-[150px] rounded-full pointer-events-none"></div>
+      <section className="relative pt-24 pb-20 md:pt-32 md:pb-24 bg-[#030712] overflow-hidden text-white">
+
+        {/* Glow Effects - Top Center Emitting Blue Light */}
+        <div className="absolute -top-[20%] left-1/2 -translate-x-1/2 w-[90%] max-w-[1000px] h-[600px] bg-[#004cf2] opacity-30 blur-[120px] rounded-full pointer-events-none"></div>
+
+        {/* Dot Pattern Overlay */}
+        <div
+          className="absolute inset-0 pointer-events-none opacity-[0.15]"
+          style={{
+            backgroundImage: 'radial-gradient(#0057ff 2px, transparent 2px)',
+            backgroundSize: '30px 30px',
+            maskImage: 'radial-gradient(ellipse 80% 80% at 50% 0%, black 10%, transparent 80%)',
+            WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at 50% 0%, black 10%, transparent 80%)'
+          }}
+        ></div>
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <motion.div
