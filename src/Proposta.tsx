@@ -143,24 +143,24 @@ function CommissionCalculator() {
             </div>
 
             {/* Results */}
-            <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="bg-white/10 rounded-2xl p-5 border border-white/10">
-                    <p className="text-white/60 text-xs font-semibold uppercase tracking-wider mb-2">
+            <div className="grid grid-cols-2 gap-3 mb-6">
+                <div className="bg-white/10 rounded-2xl p-4 border border-white/10">
+                    <p className="text-white/60 text-[10px] sm:text-xs font-semibold uppercase tracking-wider mb-1.5">
                         Comissão Mensal
                     </p>
-                    <p className="text-white font-black text-3xl">
+                    <p className="text-white font-black text-xl sm:text-3xl break-all">
                         R$ <Counter value={monthly} decimals={2} />
                     </p>
-                    <p className="text-blue-300 text-xs mt-1 font-medium">todo mês, recorrente</p>
+                    <p className="text-blue-300 text-[10px] sm:text-xs mt-1 font-medium">todo mês, recorrente</p>
                 </div>
-                <div className="bg-white/10 rounded-2xl p-5 border border-white/10">
-                    <p className="text-white/60 text-xs font-semibold uppercase tracking-wider mb-2">
+                <div className="bg-white/10 rounded-2xl p-4 border border-white/10">
+                    <p className="text-white/60 text-[10px] sm:text-xs font-semibold uppercase tracking-wider mb-1.5">
                         Projeção Anual
                     </p>
-                    <p className="text-white font-black text-3xl">
+                    <p className="text-white font-black text-xl sm:text-3xl break-all">
                         R$ <Counter value={annual} decimals={2} />
                     </p>
-                    <p className="text-blue-300 text-xs mt-1 font-medium">sem precisar reindicar</p>
+                    <p className="text-blue-300 text-[10px] sm:text-xs mt-1 font-medium">sem precisar reindicar</p>
                 </div>
             </div>
 
@@ -309,7 +309,7 @@ export default function Proposta() {
                     </p>
 
                     {/* Hero metrics */}
-                    <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center flex-wrap">
+                    <div className="flex flex-row flex-wrap gap-3 sm:gap-8 justify-center items-center">
                         {[
                             { value: '∞', label: 'sem limite de indicações' },
                             { value: '100', suffix: '%', label: 'recorrente e automático' },
@@ -320,13 +320,13 @@ export default function Proposta() {
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ delay: 0.4 + i * 0.1 }}
-                                className="flex flex-col items-center bg-white/10 border border-white/20 backdrop-blur-md rounded-2xl px-8 py-5 min-w-[150px]"
+                                className="flex flex-col items-center bg-white/10 border border-white/20 backdrop-blur-md rounded-2xl px-5 sm:px-8 py-4 sm:py-5 min-w-[100px] sm:min-w-[150px]"
                             >
-                                <span className="text-4xl font-black text-white mb-1">
+                                <span className="text-2xl sm:text-4xl font-black text-white mb-1">
                                     {m.value}
                                     {m.suffix}
                                 </span>
-                                <span className="text-blue-200 text-xs font-semibold uppercase tracking-wider text-center">
+                                <span className="text-blue-200 text-[9px] sm:text-xs font-semibold uppercase tracking-wider text-center">
                                     {m.label}
                                 </span>
                             </motion.div>
@@ -334,12 +334,12 @@ export default function Proposta() {
                     </div>
                 </motion.div>
 
-                {/* Scroll hint */}
+                {/* Scroll hint - hidden on small screens to avoid overlap */}
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1 }}
-                    className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-blue-200/60"
+                    className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 hidden sm:flex flex-col items-center gap-2 text-blue-200/60"
                 >
                     <span className="text-xs font-medium uppercase tracking-widest">
                         Continue lendo
