@@ -807,7 +807,7 @@ export default function Proposta() {
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-md mx-auto">
                                 <a
-                                    href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20vi%20a%20proposta%20de%20parceria%20do%20Nurvee%20e%20quero%20saber%20mais!"
+                                    href="https://wa.me/5582996179240?text=Ol%C3%A1%2C%20vi%20a%20proposta%20de%20parceria%20do%20Nurvee%20e%20quero%20saber%20mais!"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex-1 py-4 px-6 bg-gradient-to-r from-[#004cf2] to-blue-500 rounded-full font-bold text-white hover:shadow-[0_0_30px_rgba(0,76,242,0.5)] transition-all flex items-center justify-center gap-2"
