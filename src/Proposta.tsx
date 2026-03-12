@@ -387,26 +387,22 @@ export default function Proposta() {
                             className="space-y-6 text-slate-300 text-lg leading-relaxed"
                         >
                             <p>
-                                O Nurvee não nasceu em uma mesa de escritório. Ele nasceu da
-                                frustração de quem estava por dentro de uma loja de roupas{' '}
+                                O Nurvee foi pensado para quem ainda controla tudo no caderninho,
+                                na planilha ou no papel. Quem anota as vendas na mão,
+                                fecha o caixa no chute e{' '}
                                 <strong className="text-white">
-                                    e não encontrava um sistema que realmente funcionasse
-                                </strong>{' '}
-                                para o varejo de moda.
+                                    não sabe ao certo quanto lucrou no mês.
+                                </strong>
                             </p>
                             <p>
-                                Os sistemas existentes eram complexos demais, caros demais, ou
-                                simplesmente não entendiam a{' '}
-                                <strong className="text-white">realidade do lojista</strong>.
-                                Ele precisa lançar uma venda em segundos, saber o estoque de
-                                cabeça e fechar o caixa sem dor de cabeça.
+                                Não importa se você acabou de abrir a primeira loja ou se já
+                                tem um negócio rodando há anos no Excel. O problema é o mesmo:
+                                <strong className="text-white"> a gestão toma tempo demais</strong> e
+                                os números nunca ficam claros o suficiente para tomar decisões com confiança.
                             </p>
                             <p>
-                                Por isso cada funcionalidade do Nurvee foi desenhada com uma
-                                pergunta em mente:{' '}
-                                <em className="text-white not-italic font-bold">
-                                    "Isso resolve um problema real de uma loja real?"
-                                </em>
+                                O Nurvee existe para mudar isso. Do primeiro dia de vendas até
+                                a loja que já fatura bem e precisa de controle de verdade.
                             </p>
                         </motion.div>
 
