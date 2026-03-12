@@ -249,7 +249,7 @@ export default function Proposta() {
         'Suporte de onboarding para cada usuário que você indicar',
         'Material de divulgação pronto para usar',
         'Dashboard do parceiro para acompanhar suas indicações',
-        'Sem limite de indicações — quanto mais usuários, mais ganhos',
+        'Sem limite de indicações. Quanto mais usuários, mais ganhos',
         'Feito exclusivamente para quem gerencia varejo de moda',
     ];
 
@@ -280,7 +280,7 @@ export default function Proposta() {
                     className="relative z-10 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 border border-white/25 backdrop-blur-md text-sm font-semibold mb-8 text-blue-50"
                 >
                     <Handshake className="w-4 h-4 text-blue-200" />
-                    Proposta Exclusiva de Parceria — Nurvee
+                    Proposta Exclusiva de Parceria Nurvee
                 </motion.div>
 
                 {/* Main headline */}
@@ -304,8 +304,8 @@ export default function Proposta() {
                         indicando o sistema que lojas de roupa estavam precisando.
                     </p>
                     <p className="text-blue-200/70 text-base max-w-2xl mx-auto mb-12 [text-wrap:balance]">
-                        Cada usuário que você indica gera comissão todo mês, enquanto a assinatura estiver ativa —
-                        sem você precisar fazer mais nada.
+                        Cada usuário que você indica gera comissão todo mês, enquanto a assinatura estiver ativa.
+                        Sem precisar fazer mais nada.
                     </p>
 
                     {/* Hero metrics */}
@@ -397,8 +397,8 @@ export default function Proposta() {
                             <p>
                                 Os sistemas existentes eram complexos demais, caros demais, ou
                                 simplesmente não entendiam a{' '}
-                                <strong className="text-white">realidade do lojista</strong> —
-                                que precisa lançar uma venda em segundos, saber o estoque de
+                                <strong className="text-white">realidade do lojista</strong>.
+                                Ele precisa lançar uma venda em segundos, saber o estoque de
                                 cabeça e fechar o caixa sem dor de cabeça.
                             </p>
                             <p>
@@ -597,7 +597,7 @@ export default function Proposta() {
                         <p className="text-blue-100/80 text-lg max-w-2xl mx-auto [text-wrap:balance]">
                             Uma comissão sozinha pode parecer pouco. Mas quando você começa a
                             acumular usuários ativos, ela se transforma em uma renda passiva
-                            significativa — e cresce todo mês sem esforço extra. Veja a simulação.
+                            significativa. E cresce todo mês sem esforço extra. Veja a simulação.
                         </p>
                     </motion.div>
 
@@ -633,7 +633,7 @@ export default function Proposta() {
                                 {
                                     n: '02',
                                     title: 'Sem teto de ganhos',
-                                    desc: '10 usuários, 50, 100 — sem limite de indicações. O potencial de renda escala junto com o seu esforço e rede de contatos.',
+                                    desc: '10 usuários, 50, 100. Sem limite de indicações. O potencial de renda escala junto com o seu esforço e rede de contatos.',
                                 },
                                 {
                                     n: '03',
@@ -678,7 +678,7 @@ export default function Proposta() {
                     >
                         <div className="p-6 border-b border-white/10">
                             <h3 className="text-white font-bold text-lg">
-                                Tabela de escala — média de R$ 18,82 por usuário ativo/mês
+                                Tabela de escala: média de R$ 18,82 por usuário ativo/mês
                             </h3>
                             <p className="text-blue-200/70 text-sm mt-1">
                                 Essencial: R$ 15,33/usuário · Pro: R$ 22,30/usuário · média dos dois planos
