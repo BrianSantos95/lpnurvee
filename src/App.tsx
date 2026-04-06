@@ -404,18 +404,17 @@ export default function App() {
               Feito para quem vende roupa
             </div>
 
-            <h1 className="text-4xl md:text-6xl lg:text-[4rem] font-bold tracking-tight mb-6 leading-[1.1] max-w-4xl text-white">
-              Sua loja sob controle.<br />
-              <span className="text-blue-100 opacity-90">Decisões com&nbsp;clareza.</span>
+            <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-bold tracking-tight mb-6 leading-[1.1] max-w-5xl mx-auto text-white [text-wrap:balance]">
+              Pare de controlar sua loja no caderno e comece a <span className="text-blue-100 opacity-90 whitespace-nowrap">lucrar de verdade</span>
             </h1>
 
             <p className="text-lg md:text-xl text-blue-100/90 mb-10 leading-relaxed max-w-2xl mx-auto font-medium [text-wrap:balance]">
-              Controle cada centavo da sua loja, evite a falta de estoque e descubra seu lucro real, sem tocar em nenhuma&nbsp;planilha.
+              Um sistema simples pra quem vende roupa e quer saber exatamente quanto ganha, o que vender e quando repor sem planilha e sem complicação.
             </p>
 
             <a href="#oferta" className="block w-full sm:w-max mt-4 mx-auto">
               <HoverButton className="w-full sm:w-auto h-[64px] sm:h-[72px] text-sm sm:text-xl font-bold rounded-full bg-[#0a1120] text-white group focus:outline-none flex items-center justify-center cursor-pointer transition-transform hover:scale-105 border border-slate-700/50 hover:border-slate-500/50 px-6 sm:px-12 backdrop-blur-xl shadow-2xl">
-                QUERO ASSUMIR O CONTROLE
+                QUERO ORGANIZAR MINHA LOJA AGORA
                 <span className="w-8 h-8 sm:w-10 sm:h-10 ml-3 sm:ml-4 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white/20 transition-colors shrink-0">
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                 </span>
@@ -441,7 +440,7 @@ export default function App() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight [text-wrap:balance] max-w-3xl mx-auto mb-4">
-              Tenha em mãos tudo que precisa para a <span className="text-[#004cf2] drop-shadow-[0_0_15px_rgba(0,76,242,0.4)] whitespace-nowrap">sua loja crescer</span>
+              Tudo que você precisa pra <span className="text-[#004cf2] drop-shadow-[0_0_15px_rgba(0,76,242,0.4)]">parar de perder dinheiro</span> na sua loja
             </h2>
             <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto [text-wrap:balance]">Um dashboard completo, inteligente e em tempo real para você nunca mais perder informações importantes de vista.</p>
           </div>
