@@ -36,17 +36,32 @@
   <meta property="twitter:image"
     content="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&q=80&w=1200&h=630" />
 
-  <!-- Preconnect & Performance (Google Fonts + Image CDNs) -->
+  <!-- Preconnect & DNS-Prefetch para domínios externos -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- randomuser.me: avatares carregados no hero (above fold) -->
   <link rel="preconnect" href="https://randomuser.me" />
+  <link rel="dns-prefetch" href="https://randomuser.me" />
 
-  <!-- Font: display=optional evita layout shift; se não carregar usa system-ui -->
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=optional"
+  <!-- Fonts críticas: display=swap garante texto visível antes da fonte carregar -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap"
     rel="stylesheet" />
   <!-- Pesos secundários carregados de forma não-bloqueante -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&display=optional" />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&display=optional" rel="stylesheet" media="print" onload="this.media='all'" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+
+  <!-- CSS crítico inline: garante fundo azul e texto branco antes do bundle JS carregar -->
+  <!-- Isso evita o flash de branco (FOUC) que aumenta o LCP -->
+  <style>
+    body { margin: 0; background: #004cf2; }
+    #root { min-height: 100svh; background: #f8fafc; }
+    /* Hero visível imediatamente via CSS — animação definida em index.css */
+    .hero-fade-in { animation: hero-fade-up 0.55s cubic-bezier(0.22,1,0.36,1) both; }
+    @keyframes hero-fade-up {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 
   <!-- Theme Color for Mobile Browsers -->
   <meta name="theme-color" content="#004cf2" />
