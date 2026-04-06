@@ -442,7 +442,7 @@ export default function App() {
             <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight [text-wrap:balance] max-w-3xl mx-auto mb-4">
               Tudo que você precisa pra <span className="text-[#004cf2] drop-shadow-[0_0_15px_rgba(0,76,242,0.4)]">parar de perder dinheiro</span> na sua loja
             </h2>
-            <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto [text-wrap:balance]">Um dashboard completo, inteligente e em tempo real para você nunca mais perder informações importantes de vista.</p>
+            <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto [text-wrap:balance]">Chega de caderno rasgado e planilha travando. Aqui você tem controle total da sua loja em tempo real, com os números que realmente importam.</p>
           </div>
 
           <motion.div
@@ -933,7 +933,7 @@ export default function App() {
             {/* Objection 1 */}
             <div className="bg-white border border-slate-200 rounded-3xl p-8 hover:border-[#004cf2]/30 hover:shadow-lg hover:shadow-blue-500/5 transition-all">
               <h3 className="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
-                <span className="text-slate-400 font-normal">...</span> você ainda use planilhas
+                <span className="text-slate-400 font-normal">...</span> você ainda use caderno ou planilha
               </h3>
               <p className="text-slate-600 leading-relaxed font-medium">
                 O Nurvee permite transcrever seus dados de planilhas existentes ou recomeçar de forma muito mais simples, facilitando a transição sem dor de cabeça.
@@ -1458,7 +1458,7 @@ export default function App() {
               </span>
 
               <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight max-w-2xl text-white [text-wrap:balance]">
-                Pare de perder tempo com planilhas e cadernos.
+                Pare de perder tempo com cadernos e planilhas.
               </h2>
 
               <p className="text-blue-100 text-lg md:text-xl mb-10 max-w-xl mx-auto leading-relaxed [text-wrap:balance]">
