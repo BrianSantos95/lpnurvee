@@ -1,6 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { SparklesCore } from './components/ui/sparkles';
+
+// Lazy-load Sparkles — o bundle de partículas (~150KB) não bloqueia o LCP
+const SparklesCore = lazy(() =>
+  import('./components/ui/sparkles').then((m) => ({ default: m.SparklesCore }))
+);
 import {
   Store,
   ArrowRight,
@@ -230,18 +234,20 @@ export default function App() {
         {/* Glow Effects - Feixe de luz no topo */}
         <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-full max-w-[1000px] h-[500px] bg-white opacity-25 blur-[120px] rounded-full pointer-events-none z-0"></div>
 
-        {/* Sparkles / Quadradinhos Background */}
+        {/* Sparkles / Quadradinhos Background — lazy loaded, não bloqueia LCP */}
         <div className="absolute inset-0 w-full h-full z-0">
-          <SparklesCore
-            id="tsparticlesfullpage"
-            background="transparent"
-            minSize={0.6}
-            maxSize={1.4}
-            particleDensity={100}
-            className="w-full h-full"
-            particleColor="#FFFFFF"
-            speed={1}
-          />
+          <Suspense fallback={null}>
+            <SparklesCore
+              id="tsparticlesfullpage"
+              background="transparent"
+              minSize={0.6}
+              maxSize={1.4}
+              particleDensity={60}
+              className="w-full h-full"
+              particleColor="#FFFFFF"
+              speed={0.8}
+            />
+          </Suspense>
           {/* Radial Gradient overlay to blend it with our color */}
           <div className="absolute inset-0 w-full h-full bg-[#004cf2] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_0%,transparent_10%,black_100%)] pointer-events-none"></div>
         </div>
@@ -419,10 +425,10 @@ export default function App() {
             {/* Social Proof Avatars */}
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 bg-transparent px-2 sm:px-6 py-2 mx-auto w-full sm:w-max">
               <div className="flex -space-x-3">
-                <img className="w-8 h-8 rounded-full border-2 border-[#004cf2] object-cover" src="https://randomuser.me/api/portraits/women/43.jpg" alt="Lojista" />
-                <img className="w-8 h-8 rounded-full border-2 border-[#004cf2] object-cover" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Lojista" />
-                <img className="w-8 h-8 rounded-full border-2 border-[#004cf2] object-cover" src="https://randomuser.me/api/portraits/women/12.jpg" alt="Lojista" />
-                <img className="w-8 h-8 rounded-full border-2 border-[#004cf2] object-cover" src="https://randomuser.me/api/portraits/men/22.jpg" alt="Lojista" />
+                <img width="32" height="32" className="w-8 h-8 rounded-full border-2 border-[#004cf2] object-cover" src="https://randomuser.me/api/portraits/women/43.jpg" alt="Lojista" loading="lazy" />
+                <img width="32" height="32" className="w-8 h-8 rounded-full border-2 border-[#004cf2] object-cover" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Lojista" loading="lazy" />
+                <img width="32" height="32" className="w-8 h-8 rounded-full border-2 border-[#004cf2] object-cover" src="https://randomuser.me/api/portraits/women/12.jpg" alt="Lojista" loading="lazy" />
+                <img width="32" height="32" className="w-8 h-8 rounded-full border-2 border-[#004cf2] object-cover" src="https://randomuser.me/api/portraits/men/22.jpg" alt="Lojista" loading="lazy" />
               </div>
               <p className="text-sm font-medium text-blue-100 text-center">Testado e aprovado por <strong className="text-white">+ de 30 lojas</strong></p>
             </div>
@@ -442,8 +448,9 @@ export default function App() {
 
           <motion.div
             initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.1 }}
             className="relative rounded-[2rem] p-2 bg-white/20 backdrop-blur-2xl shadow-2xl shadow-[#004cf2]/30 border border-white/30"
           >
             <div className="rounded-[1.5rem] overflow-hidden bg-slate-900 border border-slate-700/50 shadow-inner">
@@ -556,7 +563,7 @@ export default function App() {
                         key={i}
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: false }}
+                        viewport={{ once: true }}
                         transition={{ delay: kpi.animateDelay, duration: 0.5 }}
                         className="bg-white p-3 md:p-4 rounded-xl border border-slate-100 shadow-sm relative group hover:border-[#004cf2]/30 transition-colors"
                       >
@@ -578,7 +585,7 @@ export default function App() {
                     <motion.div
                       initial={{ opacity: 0, scale: 0.98 }}
                       whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: false }}
+                      viewport={{ once: true }}
                       transition={{ delay: 0.1, duration: 0.5 }}
                       className="col-span-1 lg:col-span-2 bg-white p-4 md:p-5 rounded-xl border border-slate-100 shadow-sm flex flex-col"
                     >
@@ -621,7 +628,7 @@ export default function App() {
                               vectorEffect="non-scaling-stroke"
                               initial={{ pathLength: 0 }}
                               whileInView={{ pathLength: 1 }}
-                              viewport={{ once: false }}
+                              viewport={{ once: true }}
                               transition={{ duration: 1.5, ease: "easeOut" }}
                             />
                             <motion.path
@@ -629,7 +636,7 @@ export default function App() {
                               fill="url(#chartGradient)"
                               initial={{ opacity: 0 }}
                               whileInView={{ opacity: 1 }}
-                              viewport={{ once: false }}
+                              viewport={{ once: true }}
                               transition={{ duration: 1.5, ease: "easeOut" }}
                             />
                           </svg>
@@ -642,7 +649,7 @@ export default function App() {
                       <motion.div
                         initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: false }}
+                        viewport={{ once: true }}
                         transition={{ delay: 0.2, duration: 0.5 }}
                         className="bg-white p-5 rounded-xl border border-slate-100 shadow-sm flex-1"
                       >
@@ -659,7 +666,7 @@ export default function App() {
                             <motion.div
                               initial={{ width: 0 }}
                               whileInView={{ width: "90.6%" }}
-                              viewport={{ once: false }}
+                              viewport={{ once: true }}
                               transition={{ duration: 1.5, ease: "easeOut" }}
                               className="bg-[#004cf2] h-2.5 rounded-full"
                             ></motion.div>
@@ -683,7 +690,7 @@ export default function App() {
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
                       whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: false }}
+                      viewport={{ once: true }}
                       transition={{ delay: 0.3, duration: 0.5 }}
                       className="col-span-1 lg:col-span-2 bg-white p-4 md:p-5 rounded-xl border border-slate-100 shadow-sm"
                     >
@@ -710,7 +717,7 @@ export default function App() {
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
                       whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: false }}
+                      viewport={{ once: true }}
                       transition={{ delay: 0.4, duration: 0.5 }}
                       className="bg-white p-5 rounded-xl border border-slate-100 shadow-sm"
                     >
@@ -722,7 +729,7 @@ export default function App() {
                             <span className="font-bold text-[#004cf2]"><Counter value={30817.6} prefix="R$ " decimals={2} /></span>
                           </div>
                           <div className="w-full bg-slate-100 rounded-full h-1.5">
-                            <motion.div initial={{ width: 0 }} whileInView={{ width: "68%" }} viewport={{ once: false }} transition={{ duration: 1.5 }} className="bg-[#004cf2] h-1.5 rounded-full"></motion.div>
+                            <motion.div initial={{ width: 0 }} whileInView={{ width: "68%" }} viewport={{ once: true }} transition={{ duration: 1.5 }} className="bg-[#004cf2] h-1.5 rounded-full"></motion.div>
                           </div>
                         </div>
                         <div>
@@ -731,7 +738,7 @@ export default function App() {
                             <span className="font-bold text-[#004cf2]"><Counter value={14502.4} prefix="R$ " decimals={2} /></span>
                           </div>
                           <div className="w-full bg-slate-100 rounded-full h-1.5">
-                            <motion.div initial={{ width: 0 }} whileInView={{ width: "32%" }} viewport={{ once: false }} transition={{ duration: 1.5 }} className="bg-blue-300 h-1.5 rounded-full"></motion.div>
+                            <motion.div initial={{ width: 0 }} whileInView={{ width: "32%" }} viewport={{ once: true }} transition={{ duration: 1.5 }} className="bg-blue-300 h-1.5 rounded-full"></motion.div>
                           </div>
                         </div>
                       </div>
@@ -1062,7 +1069,7 @@ export default function App() {
                   key={i}
                   initial={{ pathLength: 0, opacity: 0 }}
                   whileInView={{ pathLength: 1, opacity: 1 }}
-                  viewport={{ once: false }}
+                  viewport={{ once: true }}
                   transition={{ duration: 1.5, delay: 0.5 + (i * 0.1) }}
                   x1="50%" y1="50%" x2={pt.x} y2={pt.y}
                   stroke="#004cf2" strokeOpacity="0.4" strokeWidth="1" strokeDasharray="4 4"
@@ -1074,7 +1081,7 @@ export default function App() {
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               transition={{ duration: 0.5 }}
               className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-center"
             >
@@ -1105,7 +1112,7 @@ export default function App() {
                 key={i}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 + (i * 0.1) }}
                 className="absolute -translate-x-1/2 -translate-y-1/2 z-10 bg-[#0A1120]/90 backdrop-blur-sm border border-slate-800 rounded-2xl p-4 w-48 text-center hover:border-[#004cf2]/60 hover:shadow-[0_0_25px_rgba(0,76,242,0.15)] transition-all cursor-default"
                 style={{ left: node.x, top: node.y }}
@@ -1131,7 +1138,7 @@ export default function App() {
                 <motion.line
                   initial={{ pathLength: 0, opacity: 0 }}
                   whileInView={{ pathLength: 1, opacity: 1 }}
-                  viewport={{ once: false }}
+                  viewport={{ once: true }}
                   transition={{ duration: 1.5 }}
                   x1="50%" y1="0" x2="50%" y2="90%"
                   stroke="#004cf2" strokeOpacity="0.4" strokeWidth="1" strokeDasharray="4 4"
@@ -1143,7 +1150,7 @@ export default function App() {
                     <motion.line
                       initial={{ pathLength: 0, opacity: 0 }}
                       whileInView={{ pathLength: 1, opacity: 1 }}
-                      viewport={{ once: false }}
+                      viewport={{ once: true }}
                       transition={{ duration: 0.8, delay: 0.3 * (i + 1) }}
                       x1="50%" y1={`${y}%`} x2="25%" y2={`${y}%`}
                       stroke="#004cf2" strokeOpacity="0.4" strokeWidth="1" strokeDasharray="4 4"
@@ -1152,7 +1159,7 @@ export default function App() {
                     <motion.line
                       initial={{ pathLength: 0, opacity: 0 }}
                       whileInView={{ pathLength: 1, opacity: 1 }}
-                      viewport={{ once: false }}
+                      viewport={{ once: true }}
                       transition={{ duration: 0.8, delay: 0.3 * (i + 1) }}
                       x1="50%" y1={`${y}%`} x2="75%" y2={`${y}%`}
                       stroke="#004cf2" strokeOpacity="0.4" strokeWidth="1" strokeDasharray="4 4"
@@ -1175,7 +1182,7 @@ export default function App() {
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: false }}
+                    viewport={{ once: true }}
                     transition={{ delay: i * 0.05 }}
                     key={i}
                     className="bg-[#0A1120]/90 backdrop-blur-md border border-slate-800 rounded-xl p-4 text-center hover:border-[#004cf2]/40 transition-colors shadow-lg"

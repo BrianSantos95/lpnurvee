@@ -36,13 +36,17 @@
   <meta property="twitter:image"
     content="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&q=80&w=1200&h=630" />
 
-  <!-- Preconnect & Performance (Google Fonts) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <!-- Preconnect & Performance (Google Fonts + Image CDNs) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://randomuser.me" />
 
-  <!-- Async loading parameter (display=swap) is crucial for preventing invisible text while loading -->
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+  <!-- Font: display=optional evita layout shift; se não carregar usa system-ui -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=optional"
     rel="stylesheet" />
+  <!-- Pesos secundários carregados de forma não-bloqueante -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&display=optional" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&display=optional" rel="stylesheet" media="print" onload="this.media='all'" />
 
   <!-- Theme Color for Mobile Browsers -->
   <meta name="theme-color" content="#004cf2" />
