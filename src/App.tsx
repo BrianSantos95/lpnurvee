@@ -1,5 +1,6 @@
 import React, { useState, lazy, Suspense } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { trackServerEvent } from './lib/tracking';
 
 // Lazy-load Sparkles — o bundle de partículas (~150KB) não bloqueia o LCP
 const SparklesCore = lazy(() =>
@@ -408,7 +409,7 @@ export default function App() {
               A Nurvee organiza estoque, vendas e lucro em um só lugar, simples, rápido e sem erro.
             </p>
 
-            <a href="#oferta" className="block w-full sm:w-max mt-4 mx-auto px-4">
+            <a href="#oferta" className="block w-full sm:w-max mt-4 mx-auto px-4" onClick={() => trackServerEvent('Purchase')}>
               <HoverButton className="w-full sm:w-auto h-[60px] sm:h-[72px] text-xs sm:text-xl font-bold rounded-full bg-[#0a1120] text-white group focus:outline-none flex items-center justify-center cursor-pointer transition-transform hover:scale-105 border border-slate-700/50 hover:border-slate-500/50 px-4 sm:px-12 backdrop-blur-xl shadow-2xl">
                 Quero organizar minha loja agora
                 <span className="w-8 h-8 sm:w-10 sm:h-10 ml-3 sm:ml-4 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white/20 transition-colors shrink-0">
@@ -896,7 +897,7 @@ export default function App() {
               Sua loja não está crescendo. <span className="text-[#004cf2] drop-shadow-[0_0_15px_rgba(0,76,242,0.4)] whitespace-nowrap">Está sobrevivendo.</span>
             </h3>
 
-            <a href="#oferta" className="block w-full sm:w-max mt-4 mx-auto">
+            <a href="#oferta" className="block w-full sm:w-max mt-4 mx-auto" onClick={() => trackServerEvent('Purchase')}>
               <HoverButton className="w-full sm:w-auto h-[64px] sm:h-[72px] text-sm sm:text-xl font-bold rounded-full bg-[#0a1120] text-white group focus:outline-none flex items-center justify-center cursor-pointer transition-transform hover:scale-105 border border-slate-700/50 hover:border-slate-500/50 px-6 sm:px-12 backdrop-blur-xl shadow-2xl">
                 QUERO PARAR DE USAR PLANILHA
                 <span className="w-8 h-8 sm:w-10 sm:h-10 ml-3 sm:ml-4 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white/20 transition-colors shrink-0">
@@ -1425,10 +1426,10 @@ export default function App() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-md mx-auto">
-                <a href="#oferta" className="flex-1 py-4 px-6 bg-gradient-to-r from-[#004cf2] to-blue-500 rounded-full font-bold text-white hover:shadow-[0_0_30px_rgba(0,76,242,0.4)] transition-all text-center block">
+                <a href="#oferta" className="flex-1 py-4 px-6 bg-gradient-to-r from-[#004cf2] to-blue-500 rounded-full font-bold text-white hover:shadow-[0_0_30px_rgba(0,76,242,0.4)] transition-all text-center block" onClick={() => trackServerEvent('Purchase')}>
                   Quero sair do caderno
                 </a>
-                <a href="#oferta" className="flex-1 py-4 px-6 bg-transparent border border-white/30 rounded-full font-bold text-white hover:bg-white/10 transition-all">
+                <a href="#oferta" className="flex-1 py-4 px-6 bg-transparent border border-white/30 rounded-full font-bold text-white hover:bg-white/10 transition-all" onClick={() => trackServerEvent('Purchase')}>
                   Ver planos
                 </a>
               </div>
