@@ -410,7 +410,7 @@ export default function App() {
 
             <a href="#oferta" className="block w-full sm:w-max mt-4 mx-auto px-4">
               <HoverButton className="w-full sm:w-auto h-[60px] sm:h-[72px] text-xs sm:text-xl font-bold rounded-full bg-[#0a1120] text-white group focus:outline-none flex items-center justify-center cursor-pointer transition-transform hover:scale-105 border border-slate-700/50 hover:border-slate-500/50 px-4 sm:px-12 backdrop-blur-xl shadow-2xl">
-                QUERO SAIR DO CADERNO AGORA
+                Quero organizar minha loja agora
                 <span className="w-8 h-8 sm:w-10 sm:h-10 ml-3 sm:ml-4 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white/20 transition-colors shrink-0">
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                 </span>
@@ -1002,7 +1002,7 @@ export default function App() {
                 { label: "Fluxo de caixa sem misturar contas pessoais", others: "partial" },
                 { label: "Registro rápido de vendas no celular (PDV)", others: "no" },
                 { label: "CRM com histórico de compras do cliente", others: "partial" },
-                { label: "Feito exclusivamente para lojistas de varejo", others: "no" },
+                { label: "Feito exclusivamente para quem vende roupa", others: "no" },
               ].map((item, idx) => (
                 <div key={idx} className="grid grid-cols-12 gap-2 sm:gap-4 p-4 sm:p-6 items-center hover:bg-slate-700/20 transition-colors">
                   <div className="col-span-6 md:col-span-6 font-medium text-slate-200 text-[11px] sm:text-base leading-snug">
