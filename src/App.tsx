@@ -389,7 +389,7 @@ export default function App() {
         </div>
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          {/* Hero content — CSS animation (sem depender de JS/Framer para aparecer = FCP/LCP mais rápido) */}
+          {/* Hero content — CSS animation */}
           <div className="flex flex-col items-center hero-fade-in">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-md text-sm font-semibold mb-8 text-blue-50">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-[#081b4b]">
@@ -400,17 +400,17 @@ export default function App() {
               Feito para quem vende roupa
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-bold tracking-tight mb-6 leading-[1.1] max-w-5xl mx-auto text-white [text-wrap:balance]">
-              Pare de controlar sua loja no caderno e comece a <span className="text-blue-100 opacity-90 whitespace-nowrap">lucrar de verdade</span>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-bold tracking-tight mb-6 leading-[1.2] max-w-5xl mx-auto text-white [text-wrap:balance] px-4">
+              Se você ainda usa caderno ou planilha... <span className="text-blue-100 opacity-90 block sm:inline">você está perdendo dinheiro</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-blue-100/90 mb-10 leading-relaxed max-w-2xl mx-auto font-medium [text-wrap:balance]">
-              Um sistema simples pra quem vende roupa e quer saber exatamente quanto ganha, o que vender e quando repor sem planilha e sem complicação.
+            <p className="text-base md:text-xl text-blue-100/90 mb-10 leading-relaxed max-w-2xl mx-auto font-medium [text-wrap:balance] px-6">
+              A Nurvee organiza estoque, vendas e lucro em um só lugar, simples, rápido e sem erro.
             </p>
 
-            <a href="#oferta" className="block w-full sm:w-max mt-4 mx-auto">
-              <HoverButton className="w-full sm:w-auto h-[64px] sm:h-[72px] text-sm sm:text-xl font-bold rounded-full bg-[#0a1120] text-white group focus:outline-none flex items-center justify-center cursor-pointer transition-transform hover:scale-105 border border-slate-700/50 hover:border-slate-500/50 px-6 sm:px-12 backdrop-blur-xl shadow-2xl">
-                QUERO ORGANIZAR MINHA LOJA AGORA
+            <a href="#oferta" className="block w-full sm:w-max mt-4 mx-auto px-4">
+              <HoverButton className="w-full sm:w-auto h-[60px] sm:h-[72px] text-xs sm:text-xl font-bold rounded-full bg-[#0a1120] text-white group focus:outline-none flex items-center justify-center cursor-pointer transition-transform hover:scale-105 border border-slate-700/50 hover:border-slate-500/50 px-4 sm:px-12 backdrop-blur-xl shadow-2xl">
+                QUERO SAIR DO CADERNO AGORA
                 <span className="w-8 h-8 sm:w-10 sm:h-10 ml-3 sm:ml-4 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white/20 transition-colors shrink-0">
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                 </span>
@@ -436,9 +436,9 @@ export default function App() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight [text-wrap:balance] max-w-3xl mx-auto mb-4">
-              Tudo que você precisa pra <span className="text-[#004cf2] drop-shadow-[0_0_15px_rgba(0,76,242,0.4)]">parar de perder dinheiro</span> na sua loja
+              O problema não é vender, é tentar controlar tudo no <span className="text-[#004cf2] drop-shadow-[0_0_15px_rgba(0,76,242,0.4)]">caderno ou planilha</span>
             </h2>
-            <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto [text-wrap:balance]">Chega de caderno rasgado e planilha travando. Aqui você tem controle total da sua loja em tempo real, com os números que realmente importam.</p>
+            <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto [text-wrap:balance]">Abandone a bagunça manual. Tudo que você tentava fazer no caderno agora está em um só lugar.</p>
           </div>
 
           <motion.div
@@ -536,8 +536,8 @@ export default function App() {
                   {/* Dashboard Header */}
                   <div className="flex justify-between items-end mb-6">
                     <div>
-                      <h2 className="text-2xl font-bold text-slate-800 tracking-tight">DashBoard Financeiro</h2>
-                      <p className="text-slate-500 text-sm mt-1">É o melhor momento para gerenciar suas finanças</p>
+                      <h2 className="text-2xl font-bold text-slate-800 tracking-tight">O controle total da sua loja. <span className="text-[#004cf2]">A Nurvee mostra o seu lucro real.</span></h2>
+                      <p className="text-slate-500 text-sm mt-1">Simples, rápido e sem complicações.</p>
                     </div>
                     <div className="flex items-center gap-2 bg-white border border-slate-200 px-4 py-2 rounded-lg shadow-sm text-sm font-medium">
                       <span className="text-slate-500">Filtrar por:</span>
@@ -716,7 +716,7 @@ export default function App() {
                       transition={{ delay: 0.4, duration: 0.5 }}
                       className="bg-white p-5 rounded-xl border border-slate-100 shadow-sm"
                     >
-                      <h3 className="font-bold text-slate-800 mb-4 text-sm flex items-center gap-2"><CreditCard className="w-4 h-4 text-[#004cf2]" /> Meios de Pagamento</h3>
+                      <h3 className="font-bold text-slate-800 mb-4 text-sm flex items-center gap-2"><CreditCard className="w-4 h-4 text-[#004cf2]" /> Como seu cliente paga</h3>
                       <div className="space-y-3">
                         <div>
                           <div className="flex justify-between text-xs mb-1">
@@ -729,7 +729,7 @@ export default function App() {
                         </div>
                         <div>
                           <div className="flex justify-between text-xs mb-1">
-                            <span className="font-semibold text-slate-600">Cartão de Crédito (<Counter value={32} suffix="%" />)</span>
+                            <span className="font-semibold text-slate-600">Cartão (<Counter value={32} suffix="%" />)</span>
                             <span className="font-bold text-[#004cf2]"><Counter value={14502.4} prefix="R$ " decimals={2} /></span>
                           </div>
                           <div className="w-full bg-slate-100 rounded-full h-1.5">
@@ -764,7 +764,7 @@ export default function App() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
             <h2 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight [text-wrap:balance] max-w-3xl mx-auto">
-              Você realmente controla <span className="text-[#004cf2] drop-shadow-[0_0_15px_rgba(0,76,242,0.5)] whitespace-nowrap">a sua loja?</span>
+              Caderno e planilha <span className="text-[#004cf2] drop-shadow-[0_0_15px_rgba(0,76,242,0.5)] whitespace-nowrap">te fazem perder dinheiro</span>
             </h2>
           </div>
 
@@ -775,18 +775,16 @@ export default function App() {
                 <LineChart className="w-6 h-6 text-[#004cf2]" />
               </div>
               <h3 className="text-lg font-bold text-white uppercase mb-6 leading-snug">
-                Você sabe seu lucro<br />líquido hoje?
+                Anotar no caderno<br />pode custar caro
               </h3>
-              <div className="space-y-3 text-sm text-slate-400 mb-8 flex-1">
-                <p>Faturamento não é lucro.</p>
-                <p>Sem margem clara você não vê a cor do dinheiro.</p>
-                <p>Sem visão diária você decide no escuro.</p>
-                <p>Sem controle o dinheiro some.</p>
-                <p className="text-slate-200 font-semibold mt-4">Lucro não pode ser surpresa.</p>
-              </div>
-              <div className="w-full pt-6 border-t border-slate-700/50">
-                <p className="text-[#004cf2] font-bold text-sm mb-2 uppercase tracking-wide">NURVEE RESOLVE:</p>
-                <p className="text-sm text-slate-300">Dashboard financeiro com lucro líquido calculado automaticamente em tempo real.</p>
+              <ul className="space-y-4 text-sm text-slate-400 mb-8 flex-1 text-left list-disc pl-5">
+                <li>Você anota uma venda e esquece de olhar depois?</li>
+                <li>Já errou o preço porque se perdeu nas anotações?</li>
+                <li>Passa horas somando tudo e o valor nunca bate?</li>
+              </ul>
+              <div className="w-full pt-6 border-t border-slate-700/50 text-center">
+                <p className="text-[#004cf2] font-bold text-sm mb-2 uppercase tracking-wide">No lugar de se perder:</p>
+                <p className="text-sm text-slate-300">A Nurvee faz as contas e te mostra o lucro na hora.</p>
               </div>
             </div>
 
@@ -796,38 +794,34 @@ export default function App() {
                 <AlertTriangle className="w-6 h-6 text-[#004cf2]" />
               </div>
               <h3 className="text-lg font-bold text-white uppercase mb-6 leading-snug">
-                Você sabe o que está<br />faltando no estoque?
+                Estoque parado é<br />dinheiro perdendo valor
               </h3>
-              <div className="space-y-3 text-sm text-slate-400 mb-8 flex-1">
-                <p>Olhar a prateleira não é gestão.</p>
-                <p>Sem controle você perde vendas.</p>
-                <p>Sem previsão você compra errado.</p>
-                <p>Sem alertas você descobre tarde.</p>
-                <p className="text-slate-200 font-semibold mt-4">Produto em falta é dinheiro na mesa.</p>
-              </div>
+              <ul className="space-y-4 text-sm text-slate-400 mb-8 flex-1 text-left list-disc pl-5">
+                <li>Você sabe exatamente o que está sem giro?</li>
+                <li>Já comprou peça que já tinha no estoque?</li>
+                <li>Sabe o que falta repor agora mesmo?</li>
+              </ul>
               <div className="w-full pt-6 border-t border-slate-700/50">
-                <p className="text-[#004cf2] font-bold text-sm mb-2 uppercase tracking-wide">NURVEE RESOLVE:</p>
-                <p className="text-sm text-slate-300">Monitoramento inteligente de estoque com alertas preditivos de produtos com risco de falta.</p>
+                <p className="text-[#004cf2] font-bold text-sm mb-2 uppercase tracking-wide">Fim da bagunça:</p>
+                <p className="text-sm text-slate-300">Saiba o que vender e o que repor sem erros.</p>
               </div>
             </div>
 
-            {/* Card 3 */}
             <div className="bg-slate-800/50 border border-slate-700/50 rounded-3xl p-8 flex flex-col items-center text-center hover:border-[#004cf2]/50 transition-colors">
               <div className="w-12 h-12 bg-slate-800 border border-slate-700 rounded-xl flex items-center justify-center mb-6 shadow-inner">
                 <Wallet className="w-6 h-6 text-[#004cf2]" />
               </div>
               <h3 className="text-lg font-bold text-white uppercase mb-6 leading-snug">
-                Contas a pagar e receber<br />estão sob controle?
+                Dinheiro da loja ou<br />seu dinheiro?
               </h3>
-              <div className="space-y-3 text-sm text-slate-400 mb-8 flex-1">
-                <p>Misturar finanças da loja com pessoal destrói o negócio.</p>
-                <p>Sem fluxo atualizado você trava o caixa.</p>
-                <p>Sem previsão você assume riscos desnecessários.</p>
-                <p className="text-slate-200 font-semibold mt-4">Caixa desorganizado quebra margem.</p>
-              </div>
+              <ul className="space-y-4 text-sm text-slate-400 mb-8 flex-1 text-left list-disc pl-5">
+                <li>Já misturou as contas da loja com as suas?</li>
+                <li>Não sabe quanto de pro-labore retirar?</li>
+                <li>O caixa nunca bate no fim do dia?</li>
+              </ul>
               <div className="w-full pt-6 border-t border-slate-700/50">
-                <p className="text-[#004cf2] font-bold text-sm mb-2 uppercase tracking-wide">NURVEE RESOLVE:</p>
-                <p className="text-sm text-slate-300">Controle completo de despesas e receitas à prova de erros.</p>
+                <p className="text-[#004cf2] font-bold text-sm mb-2 uppercase tracking-wide">Fim da confusão:</p>
+                <p className="text-sm text-slate-300">Organize suas contas e saiba quanto você ganha.</p>
               </div>
             </div>
 
@@ -904,7 +898,7 @@ export default function App() {
 
             <a href="#oferta" className="block w-full sm:w-max mt-4 mx-auto">
               <HoverButton className="w-full sm:w-auto h-[64px] sm:h-[72px] text-sm sm:text-xl font-bold rounded-full bg-[#0a1120] text-white group focus:outline-none flex items-center justify-center cursor-pointer transition-transform hover:scale-105 border border-slate-700/50 hover:border-slate-500/50 px-6 sm:px-12 backdrop-blur-xl shadow-2xl">
-                QUERO ASSUMIR O CONTROLE
+                QUERO PARAR DE USAR PLANILHA
                 <span className="w-8 h-8 sm:w-10 sm:h-10 ml-3 sm:ml-4 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white/20 transition-colors shrink-0">
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                 </span>
@@ -932,7 +926,7 @@ export default function App() {
                 <span className="text-slate-400 font-normal">...</span> você ainda use caderno ou planilha
               </h3>
               <p className="text-slate-600 leading-relaxed font-medium">
-                O Nurvee permite transcrever seus dados de planilhas existentes ou recomeçar de forma muito mais simples, facilitando a transição sem dor de cabeça.
+                Organizar sua loja é mais rápido do que escrever à mão. Nós te ajudamos a sair da bagunça em poucos minutos.
               </p>
             </div>
 
@@ -942,7 +936,7 @@ export default function App() {
                 <span className="text-slate-400 font-normal">...</span> esteja começando do zero
               </h3>
               <p className="text-slate-600 leading-relaxed font-medium">
-                A plataforma é perfeita tanto para lojas iniciantes quanto para as já estabelecidas, com módulos fáceis e prontos para usar.
+                Ideal para quem quer começar do jeito certo: vendo lucro e sabendo o que vender desde o primeiro dia.
               </p>
             </div>
 
@@ -952,17 +946,17 @@ export default function App() {
                 <span className="text-slate-400 font-normal">...</span> ache que não entende de tecnologia
               </h3>
               <p className="text-slate-600 leading-relaxed font-medium">
-                Interface totalmente intuitiva, similar a usar um aplicativo de celular. Não é preciso ser nenhum expert em tecnologia para gerenciar sua loja.
+                Se você sabe usar o WhatsApp, sabe usar a Nurvee. É simples, direto e sem termos complicados.
               </p>
             </div>
 
             {/* Objection 4 */}
             <div className="bg-white border border-slate-200 rounded-3xl p-8 hover:border-[#004cf2]/30 hover:shadow-lg hover:shadow-blue-500/5 transition-all">
               <h3 className="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
-                <span className="text-slate-400 font-normal">...</span> já use outro sistema e esteja inseguro
+                <span className="text-slate-400 font-normal">...</span> já use outro sistema genérico
               </h3>
               <p className="text-slate-600 leading-relaxed font-medium">
-                Nós te ajudamos a organizar a casa e começar do jeito certo no Nurvee. O processo de adaptação costuma levar apenas alguns dias para a equipe inteira.
+                A maioria dos sistemas é feita para empresas grandes e complexas. A Nurvee é feita para quem vende roupa e quer simplicidade.
               </p>
             </div>
 
@@ -1085,23 +1079,23 @@ export default function App() {
                 <h3 className="text-white font-black text-2xl mb-1 tracking-widest uppercase relative z-10 drop-shadow-[0_0_10px_rgba(0,0,0,1)]">NURVEE</h3>
               </div>
               <div className="text-center mt-6">
-                <p className="text-white font-bold text-xs uppercase tracking-widest mb-2 drop-shadow-md">O PROCESSADOR DA SUA OPERAÇÃO</p>
+                <p className="text-white font-bold text-xs uppercase tracking-widest mb-2 drop-shadow-md">TUDO EM UM SÓ LUGAR</p>
                 <p className="text-slate-400 text-[10px] uppercase tracking-wider relative">
-                  Centraliza. <span className="text-[#004cf2]">Analisa.</span> Conecta. <span className="text-[#004cf2]">Projeta.</span>
+                  Organiza. <span className="text-[#004cf2]">Simplifica.</span> Lucra. <span className="text-[#004cf2]">Cresce.</span>
                 </p>
               </div>
             </motion.div>
 
             {/* Outer Nodes */}
             {[
-              { title: "FINANCEIRO", desc: "Entradas. Saídas. Lucro. Margem.", x: "50%", y: "5%" },
-              { title: "VENDAS (PDV)", desc: "Registro rápido. Caixa. Movimentações.", x: "85%", y: "25%" },
-              { title: "ESTOQUE", desc: "Produtos. Alertas. Curva ABC.", x: "92%", y: "50%" },
-              { title: "CLIENTES", desc: "Histórico. Frequência. Ticket Médio.", x: "85%", y: "75%" },
-              { title: "PRECIFICAÇÃO", desc: "Custos. Markup. Preço Ideal.", x: "50%", y: "90%" },
-              { title: "METAS", desc: "Progresso diário. Motivação da equipe.", x: "15%", y: "75%" },
-              { title: "RELATÓRIOS", desc: "DRE automático. Indicadores de visão.", x: "8%", y: "50%" },
-              { title: "FORNECEDORES", desc: "Compras. Histórico. Prazos.", x: "15%", y: "25%" },
+              { title: "LUCRO REAL", desc: "Saiba quanto sobra no seu bolso.", x: "50%", y: "5%" },
+              { title: "VENDAS RÁPIDAS", desc: "Registre vendas em segundos.", x: "85%", y: "25%" },
+              { title: "ESTOQUE FÁCIL", desc: "Saiba o que repor agora.", x: "92%", y: "50%" },
+              { title: "CLIENTES", desc: "Veja quem mais compra de você.", x: "85%", y: "75%" },
+              { title: "PREÇO CERTO", desc: "Nunca mais perca na margem.", x: "50%", y: "90%" },
+              { title: "METAS", desc: "Acompanhe seu crescimento.", x: "15%", y: "75%" },
+              { title: "RESULTADOS", desc: "Números que você entende.", x: "8%", y: "50%" },
+              { title: "COMPRAS", desc: "Pare de comprar peça errada.", x: "15%", y: "25%" },
             ].map((node, i) => (
               <motion.div
                 key={i}
@@ -1119,60 +1113,25 @@ export default function App() {
           </div>
 
           {/* Mobile System Visualization */}
-          <div className="md:hidden flex flex-col items-center gap-2 mt-4">
+          <div className="md:hidden flex flex-col items-center gap-2 mt-4 text-center">
             <div className="bg-[#020408] border border-[#004cf2] shadow-[0_0_30px_rgba(0,76,242,0.3)] rounded-2xl py-8 px-6 w-[95%] text-center relative overflow-hidden mb-6 z-20 mx-auto">
               <div className="absolute inset-0 bg-[#004cf2]/5 animate-pulse"></div>
               <h3 className="text-white font-black text-2xl mb-4 tracking-widest uppercase relative z-10">NURVEE</h3>
-              <p className="text-white font-bold text-xs uppercase tracking-widest mb-2 relative z-10">O PROCESSADOR DA SUA OPERAÇÃO</p>
-              <p className="text-slate-400 text-[10px] uppercase tracking-wider relative z-10">Centraliza. Analisa. Conecta. Projeta.</p>
+              <p className="text-white font-bold text-xs uppercase tracking-widest mb-2 relative z-10">A FORMA SIMPLES DE ORGANIZAR TUDO</p>
+              <p className="text-slate-400 text-[10px] uppercase tracking-wider relative z-10">Organiza. Simplifica. Lucra. Cresce.</p>
             </div>
 
             <div className="relative w-full px-2">
-              {/* Connecting Lines Background (Mobile) */}
-              <svg className="absolute inset-0 w-full h-full pointer-events-none z-0" style={{ top: '-1.5rem', height: 'calc(100% + 1.5rem)' }}>
-                <motion.line
-                  initial={{ pathLength: 0, opacity: 0 }}
-                  whileInView={{ pathLength: 1, opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1.5 }}
-                  x1="50%" y1="0" x2="50%" y2="90%"
-                  stroke="#004cf2" strokeOpacity="0.4" strokeWidth="1" strokeDasharray="4 4"
-                />
-
-                {[12.5, 37.5, 62.5, 87.5].map((y, i) => (
-                  <React.Fragment key={i}>
-                    {/* Linha pro item da Esquerda */}
-                    <motion.line
-                      initial={{ pathLength: 0, opacity: 0 }}
-                      whileInView={{ pathLength: 1, opacity: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.8, delay: 0.3 * (i + 1) }}
-                      x1="50%" y1={`${y}%`} x2="25%" y2={`${y}%`}
-                      stroke="#004cf2" strokeOpacity="0.4" strokeWidth="1" strokeDasharray="4 4"
-                    />
-                    {/* Linha pro item da Direita */}
-                    <motion.line
-                      initial={{ pathLength: 0, opacity: 0 }}
-                      whileInView={{ pathLength: 1, opacity: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.8, delay: 0.3 * (i + 1) }}
-                      x1="50%" y1={`${y}%`} x2="75%" y2={`${y}%`}
-                      stroke="#004cf2" strokeOpacity="0.4" strokeWidth="1" strokeDasharray="4 4"
-                    />
-                  </React.Fragment>
-                ))}
-              </svg>
-
               <div className="grid grid-cols-2 gap-3 gap-y-12 w-full relative z-10">
                 {[
-                  { title: "FINANCEIRO", desc: "Entradas. Saídas. Lucro. Margem." },
-                  { title: "VENDAS (PDV)", desc: "Registro rápido. Caixa. Movimentações." },
-                  { title: "ESTOQUE", desc: "Produtos. Alertas. Curva ABC." },
-                  { title: "CLIENTES", desc: "Histórico. Frequência. Ticket." },
-                  { title: "PRECIFICAÇÃO", desc: "Custos. Markup. Preço Ideal." },
-                  { title: "METAS", desc: "Progresso. Motivação da equipe." },
-                  { title: "RELATÓRIOS", desc: "DRE. Indicadores estratégicos." },
-                  { title: "FORNECEDORES", desc: "Controle de Compras. Prazos." },
+                  { title: "LUCRO REAL", desc: "Saiba quanto sobra no seu bolso." },
+                  { title: "VENDAS", desc: "Registre tudo pelo celular." },
+                  { title: "ESTOQUE", desc: "Saiba o que repor agora." },
+                  { title: "CLIENTES", desc: "Quem compra de você." },
+                  { title: "PREÇO", desc: "Acerte na margem." },
+                  { title: "METAS", desc: "Acompanhe tudo." },
+                  { title: "RESULTADOS", desc: "Números simples." },
+                  { title: "COMPRAS", desc: "Compre certo." },
                 ].map((node, i) => (
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
@@ -1218,14 +1177,14 @@ export default function App() {
             {[0, 1].map((trackIdx) => (
               <div key={trackIdx} className="flex shrink-0 animate-[marquee_50s_linear_infinite] group-hover:[animation-play-state:paused] gap-6 px-3" aria-hidden={trackIdx === 1 ? 'true' : 'false'}>
                 {[
-                  { name: "Mariana Silveira", role: "Dona de Boutique • SP", text: "Antes eu achava que estava empatando. O Nurvee me mostrou que alguns produtos consumiam toda a minha margem. No mês seguinte que os cortei, meu lucro dobrou.", avatar: "https://randomuser.me/api/portraits/women/44.jpg" },
-                  { name: "Carla Mendes", role: "Empreendedora • RJ", text: "Eu perdia 2 horas todo dia na planilha. Agora eu aperto um botão e vejo tudo que entrou de PIX e Cartão. A paz de espírito não tem preço !", avatar: "https://randomuser.me/api/portraits/women/68.jpg" },
-                  { name: "Juliana Costa", role: "Lojista • MG", text: "Sempre tive medo de investir em anúncios, mas agora com o fluxo de caixa certinho e sabendo o lucro real, faço isso com a maior segurança.", avatar: "https://randomuser.me/api/portraits/women/89.jpg" },
-                  { name: "Amanda Silva", role: "Dona de Loja Infantil • SC", text: "A facilidade de controlar o estoque e PDV na mesma tela me economizou o preço de um funcionário. Indico pra todo mundo.", avatar: "https://randomuser.me/api/portraits/women/32.jpg" },
-                  { name: "Mariana Silveira", role: "Dona de Boutique • SP", text: "Antes eu achava que estava empatando. O Nurvee me mostrou que alguns produtos consumiam toda a minha margem. No mês seguinte que os cortei, meu lucro dobrou.", avatar: "https://randomuser.me/api/portraits/women/44.jpg" },
-                  { name: "Carla Mendes", role: "Empreendedora • RJ", text: "Eu perdia 2 horas todo dia na planilha. Agora eu aperto um botão e vejo tudo que entrou de PIX e Cartão. A paz de espírito não tem preço !", avatar: "https://randomuser.me/api/portraits/women/68.jpg" },
-                  { name: "Juliana Costa", role: "Lojista • MG", text: "Sempre tive medo de investir em anúncios, mas agora com o fluxo de caixa certinho e sabendo o lucro real, faço isso com a maior segurança.", avatar: "https://randomuser.me/api/portraits/women/89.jpg" },
-                  { name: "Amanda Silva", role: "Dona de Loja Infantil • SC", text: "A facilidade de controlar o estoque e PDV na mesma tela me economizou o preço de um funcionário. Indico pra todo mundo.", avatar: "https://randomuser.me/api/portraits/women/32.jpg" },
+                  { name: "Mariana Silveira", role: "Boutique Feminina, SP", text: "Eu achava que minha loja dava lucro, mas na verdade eu estava pagando para trabalhar. A Nurvee me mostrou onde o dinheiro sumia. Hoje tripliquei meu lucro real.", avatar: "https://randomuser.me/api/portraits/women/44.jpg" },
+                  { name: "Carla Mendes", role: "Boutique de Roupas, RJ", text: "Antes eu me perdia nos preços e nas planilhas. Agora sei exatamente quanto ganho em cada venda. É a paz que toda lojista precisa.", avatar: "https://randomuser.me/api/portraits/women/68.jpg" },
+                  { name: "Juliana Costa", role: "Loja de Calçados, MG", text: "Eu tinha medo de comprar estoque e não vender. Com os alertas da Nurvee, compro só o que sai e meu dinheiro não fica mais parado na prateleira.", avatar: "https://randomuser.me/api/portraits/women/89.jpg" },
+                  { name: "Amanda Silva", role: "Ecommerce de Moda, SC", text: "Trocar o caderninho pela Nurvee foi a melhor decisão. Em um mês minha loja já estava organizada e o faturamento subiu porque parei de perder vendas.", avatar: "https://randomuser.me/api/portraits/women/32.jpg" },
+                  { name: "Mariana Silveira", role: "Boutique Feminina, SP", text: "Eu achava que minha loja dava lucro, mas na verdade eu estava pagando para trabalhar. A Nurvee me mostrou onde o dinheiro sumia. Hoje tripliquei meu lucro real.", avatar: "https://randomuser.me/api/portraits/women/44.jpg" },
+                  { name: "Carla Mendes", role: "Boutique de Roupas, RJ", text: "Antes eu me perdia nos preços e nas planilhas. Agora sei exatamente quanto ganho em cada venda. É a paz que toda lojista precisa.", avatar: "https://randomuser.me/api/portraits/women/68.jpg" },
+                  { name: "Juliana Costa", role: "Loja de Calçados, MG", text: "Eu tinha medo de comprar estoque e não vender. Com os alertas da Nurvee, compro só o que sai e meu dinheiro não fica mais parado na prateleira.", avatar: "https://randomuser.me/api/portraits/women/89.jpg" },
+                  { name: "Amanda Silva", role: "Ecommerce de Moda, SC", text: "Trocar o caderninho pela Nurvee foi a melhor decisão. Em um mês minha loja já estava organizada e o faturamento subiu porque parei de perder vendas.", avatar: "https://randomuser.me/api/portraits/women/32.jpg" },
                 ].map((node, i) => (
                   <div key={i} className="w-[320px] md:w-[400px] bg-white rounded-3xl p-6 shadow-sm border border-slate-100 flex flex-col shrink-0 transform transition-transform duration-300 hover:scale-[1.02]">
                     <div className="flex items-center justify-between mb-4">
@@ -1256,14 +1215,14 @@ export default function App() {
             {[0, 1].map((trackIdx) => (
               <div key={trackIdx} className="flex shrink-0 animate-[marquee-reverse_40s_linear_infinite] group-hover:[animation-play-state:paused] gap-6 px-3" aria-hidden={trackIdx === 1 ? 'true' : 'false'}>
                 {[
-                  { name: "Bárbara Leão", role: "Empreendedora • MG", text: "O suporte é simplesmente impecável. Sempre que precisamos de algo, a equipe está disponível com um sorriso no rosto. Vale cada centavo.", avatar: "https://randomuser.me/api/portraits/women/12.jpg" },
-                  { name: "Luiza Moreira", role: "Moda Íntima • SP", text: "Não sou a melhor com tecnologia, mas o Nurvee é tão visual que nem precisei de treinamento. A equipe toda já acostumou rapidinho.", avatar: "https://randomuser.me/api/portraits/women/54.jpg" },
-                  { name: "Rafael Torres", role: "Multimarcas • RS", text: "Conseguimos cortar gastos invisíveis com a curva ABC. Saber quem são meus melhores clientes também mudou nosso jogo de vendas.", avatar: "https://randomuser.me/api/portraits/men/32.jpg" },
-                  { name: "Cláudia Vieira", role: "Dona de Loja de Calçados", text: "Minha grande dor era não saber onde estava o dinheiro. A plataforma clareou meus números, hoje eu fecho o mês muito tranquila.", avatar: "https://randomuser.me/api/portraits/women/79.jpg" },
-                  { name: "Bárbara Leão", role: "Empreendedora • MG", text: "O suporte é simplesmente impecável. Sempre que precisamos de algo, a equipe está disponível com um sorriso no rosto. Vale cada centavo.", avatar: "https://randomuser.me/api/portraits/women/12.jpg" },
-                  { name: "Luiza Moreira", role: "Moda Íntima • SP", text: "Não sou a melhor com tecnologia, mas o Nurvee é tão visual que nem precisei de treinamento. A equipe toda já acostumou rapidinho.", avatar: "https://randomuser.me/api/portraits/women/54.jpg" },
-                  { name: "Rafael Torres", role: "Multimarcas • RS", text: "Conseguimos cortar gastos invisíveis com a curva ABC. Saber quem são meus melhores clientes também mudou nosso jogo de vendas.", avatar: "https://randomuser.me/api/portraits/men/32.jpg" },
-                  { name: "Cláudia Vieira", role: "Dona de Loja de Calçados", text: "Minha grande dor era não saber onde estava o dinheiro. A plataforma clareou meus números, hoje eu fecho o mês muito tranquila.", avatar: "https://randomuser.me/api/portraits/women/79.jpg" },
+                  { name: "Bárbara Leão", role: "Empreendedora, MG", text: "O suporte é simplesmente impecável. Sempre que precisamos de algo, a equipe está disponível com um sorriso no rosto. Vale cada centavo.", avatar: "https://randomuser.me/api/portraits/women/12.jpg" },
+                  { name: "Luiza Moreira", role: "Moda Íntima, SP", text: "Não sou a melhor com tecnologia, mas o Nurvee é tão visual que nem precisei de treinamento. A equipe toda já acostumou rapidinho.", avatar: "https://randomuser.me/api/portraits/women/54.jpg" },
+                  { name: "Rafael Torres", role: "Multimarcas, RS", text: "Conseguimos cortar gastos invisíveis com a curva ABC. Saber quem são meus melhores clientes também mudou nosso jogo de vendas.", avatar: "https://randomuser.me/api/portraits/men/32.jpg" },
+                  { name: "Cláudia Vieira", role: "Loja de Calçados", text: "Minha grande dor era não saber onde estava o dinheiro. A plataforma clareou meus números, hoje eu fecho o mês muito tranquila.", avatar: "https://randomuser.me/api/portraits/women/79.jpg" },
+                  { name: "Bárbara Leão", role: "Empreendedora, MG", text: "O suporte é simplesmente impecável. Sempre que precisamos de algo, a equipe está disponível com um sorriso no rosto. Vale cada centavo.", avatar: "https://randomuser.me/api/portraits/women/12.jpg" },
+                  { name: "Luiza Moreira", role: "Moda Íntima, SP", text: "Não sou a melhor com tecnologia, mas o Nurvee é tão visual que nem precisei de treinamento. A equipe toda já acostumou rapidinho.", avatar: "https://randomuser.me/api/portraits/women/54.jpg" },
+                  { name: "Rafael Torres", role: "Multimarcas, RS", text: "Conseguimos cortar gastos invisíveis com a curva ABC. Saber quem são meus melhores clientes também mudou nosso jogo de vendas.", avatar: "https://randomuser.me/api/portraits/men/32.jpg" },
+                  { name: "Cláudia Vieira", role: "Loja de Calçados", text: "Minha grande dor era não saber onde estava o dinheiro. A plataforma clareou meus números, hoje eu fecho o mês muito tranquila.", avatar: "https://randomuser.me/api/portraits/women/79.jpg" },
                 ].map((node, i) => (
                   <div key={i} className="w-[320px] md:w-[400px] bg-white rounded-3xl p-6 shadow-sm border border-slate-100 flex flex-col shrink-0 transform transition-transform duration-300 hover:scale-[1.02]">
                     <div className="flex items-center justify-between mb-4">
@@ -1350,7 +1309,7 @@ export default function App() {
                 rel="noopener noreferrer"
                 className="w-full py-4 rounded-xl font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 transition-colors text-center block"
               >
-                Assinar Essencial
+                Quero organizar minha loja
               </a>
             </div>
 
@@ -1386,7 +1345,7 @@ export default function App() {
                 rel="noopener noreferrer"
                 className="w-full py-4 rounded-xl font-bold text-white bg-[#004cf2] hover:bg-blue-700 transition-colors shadow-lg shadow-[#004cf2]/30 text-center block"
               >
-                Assinar Pro
+                Quero meu lucro de verdade
               </a>
             </div>
           </div>
@@ -1462,8 +1421,8 @@ export default function App() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-md mx-auto">
-                <a href="#oferta" className="flex-1 py-4 px-6 bg-gradient-to-r from-[#004cf2] to-blue-500 rounded-full font-bold text-white hover:shadow-[0_0_30px_rgba(0,76,242,0.4)] transition-all">
-                  Assinar Nurvee
+                <a href="#oferta" className="flex-1 py-4 px-6 bg-gradient-to-r from-[#004cf2] to-blue-500 rounded-full font-bold text-white hover:shadow-[0_0_30px_rgba(0,76,242,0.4)] transition-all text-center block">
+                  Quero sair do caderno
                 </a>
                 <a href="#oferta" className="flex-1 py-4 px-6 bg-transparent border border-white/30 rounded-full font-bold text-white hover:bg-white/10 transition-all">
                   Ver planos
