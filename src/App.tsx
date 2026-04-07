@@ -401,7 +401,7 @@ export default function App() {
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-bold tracking-tight mb-6 leading-[1.2] max-w-5xl mx-auto text-white [text-wrap:balance] px-4">
-              Se você ainda usa caderno ou planilha... <span className="text-blue-100 opacity-90 block sm:inline">você está perdendo dinheiro</span>
+              Se você ainda usa caderno ou planilha... <span className="text-blue-100 opacity-90 block sm:inline">você está perdendo dinheiro que poderia estar no seu bolso</span>
             </h1>
 
             <p className="text-base md:text-xl text-blue-100/90 mb-10 leading-relaxed max-w-2xl mx-auto font-medium [text-wrap:balance] px-6">
@@ -775,7 +775,7 @@ export default function App() {
                 <LineChart className="w-6 h-6 text-[#004cf2]" />
               </div>
               <h3 className="text-lg font-bold text-white uppercase mb-6 leading-snug">
-                Anotar no caderno<br />pode custar caro
+                Você sabe quanto cada venda anotada no caderno te custou?
               </h3>
               <ul className="space-y-4 text-sm text-slate-400 mb-8 flex-1 text-left list-disc pl-5">
                 <li>Você anota uma venda e esquece de olhar depois?</li>
@@ -794,7 +794,7 @@ export default function App() {
                 <AlertTriangle className="w-6 h-6 text-[#004cf2]" />
               </div>
               <h3 className="text-lg font-bold text-white uppercase mb-6 leading-snug">
-                Estoque parado é<br />dinheiro perdendo valor
+                Você sabe o que está parado no seu estoque agora?
               </h3>
               <ul className="space-y-4 text-sm text-slate-400 mb-8 flex-1 text-left list-disc pl-5">
                 <li>Você sabe exatamente o que está sem giro?</li>
@@ -812,7 +812,7 @@ export default function App() {
                 <Wallet className="w-6 h-6 text-[#004cf2]" />
               </div>
               <h3 className="text-lg font-bold text-white uppercase mb-6 leading-snug">
-                Dinheiro da loja ou<br />seu dinheiro?
+                Você sabe separar o dinheiro da loja do seu dinheiro pessoal?
               </h3>
               <ul className="space-y-4 text-sm text-slate-400 mb-8 flex-1 text-left list-disc pl-5">
                 <li>Já misturou as contas da loja com as suas?</li>
@@ -831,7 +831,7 @@ export default function App() {
                 <FileText className="w-6 h-6 text-[#004cf2]" />
               </div>
               <h3 className="text-lg font-bold text-white uppercase mb-6 leading-snug">
-                Ainda anota vendas no<br />caderninho ou planilha?
+                Você sabe quanto tempo perde repetindo tarefas manuais todo dia?
               </h3>
               <div className="space-y-3 text-sm text-slate-400 mb-8 flex-1">
                 <p>Papel aceita tudo, menos crescimento de verdade.</p>
@@ -852,7 +852,7 @@ export default function App() {
                 <Target className="w-6 h-6 text-[#004cf2]" />
               </div>
               <h3 className="text-lg font-bold text-white uppercase mb-6 leading-snug">
-                Você sabe quais produtos<br />dão mais lucro?
+                Você sabe quais produtos realmente colocam dinheiro no seu bolso?
               </h3>
               <div className="space-y-3 text-sm text-slate-400 mb-8 flex-1">
                 <p>Vender muito não é sinônimo de alta margem.</p>
@@ -873,7 +873,7 @@ export default function App() {
                 <Users className="w-6 h-6 text-[#004cf2]" />
               </div>
               <h3 className="text-lg font-bold text-white uppercase mb-6 leading-snug">
-                Você sabe quem são<br />seus melhores clientes?
+                Você sabe quem são os clientes que mais trazem lucro para sua loja?
               </h3>
               <div className="space-y-3 text-sm text-slate-400 mb-8 flex-1">
                 <p>Histórico espalhado em conversas soltas no WhatsApp.</p>
@@ -1254,9 +1254,13 @@ export default function App() {
       <section id="oferta" className="py-24 bg-white relative text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          <div className="mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Investimento Simples e Transparente</h2>
-            <p className="text-lg text-slate-600">Escolha o plano ideal para profissionalizar a sua loja.</p>
+          <div className="mb-16">
+            <span className="text-[#004cf2] font-black uppercase tracking-widest text-xs md:text-sm mb-4 block">RETORNO IMEDIATO</span>
+            <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6 [text-wrap:balance] tracking-tight leading-tight">
+              Uma venda perdida por falta de estoque <br className="hidden md:block"/> 
+              <span className="text-[#004cf2] drop-shadow-[0_0_15px_rgba(0,76,242,0.2)]">já paga meses de Nurvee.</span>
+            </h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto font-medium [text-wrap:balance]">Investimento simples e transparente para profissionalizar o seu negócio.</p>
           </div>
 
           {/* Toggle Mensal/Anual */}
